@@ -1,0 +1,1519 @@
+/* ==========================================
+   1. GLOBAL STYLES & RESET
+   ========================================== */
+*{
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+    font-family: 'Afacad-Regular';
+    src: url('/public/assets/fonts/Afacad/static/Afacad-Regular.ttf');
+}
+@font-face {
+    font-family: 'Afacad-Medium';
+    src: url('/public/assets/fonts/Afacad/static/Afacad-Medium.ttf');
+}
+@font-face {
+    font-family: 'Philosopher-Bold';
+    src: url('/public/assets/fonts/Philosopher/Philosopher-Bold.ttf');
+}
+@font-face {
+    font-family: 'Afacad-SemiBold';
+    src: url('/public/assets/fonts/Afacad/static/Afacad-SemiBold.ttf');
+}
+
+
+/* Apply it to your elements */
+h1 ,h2,h3,h4,h5,h6{
+    font-family: 'Philosopher-Bold' !important;
+}
+
+body {
+  background-color: #fff;
+  color: #FFFFFF;
+  font-family: 'Afacad-Regular' !important;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+
+/* ==========================================
+   2. REUSABLE COMPONENTS & BUTTONS
+   ========================================== */
+.nav-bar {
+  padding: 20px 0;
+  background-color: #3C4D4B;
+  color: #fff;
+}
+
+.header {
+    padding: 15px 0;
+}
+
+.container {
+  max-width: 1450px;
+}
+
+.custom-btn {
+  width: fit-content;
+  padding: 10px 30px;
+  border-radius: 8px; 
+  border: 1px solid transparent;
+}
+
+.transparent-btn {
+  border-color: #000;
+  color: #000;
+  background-color: transparent !important;
+}
+
+.yellow-btn {
+  background-color: #CFB28D;
+  border-color: #CFB28D;
+}
+
+.list-area li {
+    padding-left: 20px;
+}
+
+
+/* ==========================================
+   3. SCIENCEDIRECT HERO BANNER LAYOUT
+   ========================================== */
+.sd-hero-container {
+
+  background-color: #ffffff;
+}
+
+.sd-left-content {
+  position: relative;
+  z-index: 5;
+}
+
+/* Background image with exact dark teal overlay tint */
+.sd-hero-bg {
+  position: relative;
+  background: url('/public/assets/img/banner-bg.png') no-repeat center center/cover;
+  padding: 160px 0 140px 0;
+}
+
+/* Decorative Gold Top Line Accent */
+.sd-gold-line {
+  width: 32px;
+  height: 1.5px;
+  background-color: #cda27b;
+  margin-right: 10px;
+}
+
+/* Top Mini Heading Content Stat */
+.sd-stat-text {
+  color: #dcb896;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* Main Display Title Typography */
+.sd-main-title {
+  font-size: 60px !important;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+/* Main Title Italic Color Accent */
+.sd-title-italic {
+  color: #CFB28D;
+}
+
+/* Sub-description Paragraph Body styling */
+.sd-sub-desc {
+  color: #FFFFFF !important;
+  font-size: 20px;
+  max-width: 520px;
+  font-size: 15px;
+}
+
+/* Left Grid Dots Replicated Precisely */
+.sd-dots-overlay {
+  position: absolute;
+  left: 20px;
+  top: 45%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 26px;
+  line-height: 1.1;
+  letter-spacing: 6px;
+  width: 35px;
+  word-break: break-all;
+  user-select: none;
+}
+
+
+/* ==========================================
+   4. STACKED / ROTATED CARDS
+   ========================================== */
+.sd-cards-wrapper {
+  position: relative;
+  height: 340px;
+}
+
+.sd-card-base {
+  position: absolute;
+  width: 411px;
+  border-radius: 2px !important;
+  border: none !important;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18) !important;
+  padding: 16px !important;
+
+}
+
+.sd-card-1 {
+    background-color: #ffffff !important;
+    top: -76px;
+    left: 11%;
+    transform: rotate(-4.5deg);
+    z-index: 3;
+}
+
+.sd-card-2 {
+  background-color: #dcb896 !important;
+  top: 65px;
+  right: 8%;
+  transform: rotate(3deg);
+  z-index: 2;
+}
+
+.sd-card-3 {
+  background-color: #ffffff !important;
+  bottom: -7px;
+  left: 14%;
+  transform: rotate(-1.5deg);
+  z-index: 1;
+}
+
+/* Micro Elements Inside Stacked Cards */
+.sd-card-meta {
+  font-size: 16px !important;
+  font-weight: 500;
+}
+
+.sd-card-badge {
+  background-color: #ffffff !important;
+  border-color: #dcb896 !important;
+  font-size: 9px;
+  font-weight: 400;
+}
+
+.sd-card-title {
+  font-size: 22px;
+  line-height: 1.3;
+}
+
+.sd-card-footer-text {
+     font-size: 14px;
+    color: #64748B !important;
+}
+
+
+
+
+.sd-search-panel {
+  background-color: #CFB28D !important; /* Exact light brown color */
+  border-radius: 4px;
+  padding: 30px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  margin: -85px auto 0;
+  position: relative;
+  z-index: 10;
+  max-width: 1200px;
+}
+
+.sd-input-label {
+  font-size: 13px;
+  color: #3C4D4B !important;
+}
+
+/* AntD Input Override to make them translucent brown-bordered inside the panel */
+.sd-search-panel .ant-input {
+  background-color: transparent !important;
+  border: 1px solid #E2E8F0 !important;
+  color: #223333 !important;
+  border-radius: 8px !important;
+  height: 42px !important;
+}
+
+.sd-search-panel .ant-input::placeholder {
+  color: rgba(34, 51, 51, 0.65) !important;
+}
+
+.sd-search-panel .ant-input:focus, 
+.sd-search-panel .ant-input:hover {
+  border-color: #2c3e3f !important;
+  background-color: rgba(255, 255, 255, 0.35) !important;
+  box-shadow: none !important;
+}
+
+/* AntD Button Specific Style to match image search button */
+.sd-search-btn {
+  background-color: #384e4e !important;
+  border: none !important;
+  height: 42px !important;
+  border-radius: 8px !important;
+  font-weight: 500 !important;
+  color: #ffffff !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.sd-search-btn:hover {
+  background-color: #293b3b !important;
+}
+
+/* Popular Keywords Filter Divider Layout */
+.sd-popular-divider {
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.sd-popular-title {
+  font-size: 16px;
+  color: #3C4D4B !important;
+}
+
+/* Popular filter badges pill shape */
+.sd-badge-pill {
+     background-color: #ffffff !important;
+    color: #2c3e3f !important;
+    padding: 6px 11px;
+    border-radius: 20px;
+    font-size: 14px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Advanced Dropdown Action Font Parameters */
+.sd-advanced-link {
+  color: #3C4D4B !important;
+  font-size: 13px;
+}
+
+.sd-icon-nano {
+  font-size: 10px;
+}
+
+.sd-search-btn .anticon {
+    font-size: 16px;
+    margin-right: 2px;
+}
+/* ==========================================
+   1. TOP STATS BAR WITH DOT BACKGROUNDS
+   ========================================== */
+.sd-content-section {
+  background-color: #ffffff;
+
+ 
+}
+.sd-content-section .sd-title{
+ font-size: 38px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.sd-stats-bar {
+  background-color: #3C4D4B; /* Dark Teal exact match */
+  color: #ffffff;
+  padding:45px 20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+   background-image: url("../../../public/assets/img/banner-bottom-bg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.sd-stats-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 1200px;
+  z-index: 2;
+}
+
+.sd-stat-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.sd-stat-icon {
+  font-size: 32px;
+  color: #CFB28D; /* Gold Accent */
+}
+
+
+.sd-stat-item p {
+  font-size: 16px;
+  color:  #C5C5C5;
+  margin: 0;
+}
+
+/* Dots effect mimicking grid layout */
+
+
+/* ==========================================
+   2. HEADINGS & TABS CUSTOMIZATION
+   ========================================== */
+.sd-explore-heading {
+  font-size: 48px;
+  color: #3C4D4B;
+  line-height: 1.3;
+}
+
+/* ==========================================
+   1. ANT DESIGN TABS OVERRIDES (EXACT MATCH)
+   ========================================== */
+.sd-custom-tabs-nav .ant-tabs-nav {
+  margin-bottom: 20px !important;
+  border-bottom: 2px solid #eef1f1 !important;
+}
+
+.sd-custom-tabs-nav .ant-tabs-tab {
+  padding: 14px 8px !important;
+  font-size: 17px !important;
+  font-weight: 500 !important;
+  color: #556666 !important;
+}
+
+.sd-custom-tabs-nav .ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: #3C4D4B !important;
+  font-weight: 600 !important;
+}
+
+.sd-custom-tabs-nav .ant-tabs-ink-bar {
+  background: #223333 !important;
+  height: 3px !important;
+}
+
+.sd-view-all-pub {
+  color: #cda27b !important;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+
+/* ==========================================
+   2. LEFT SIDEBAR CARD STYLING
+   ========================================== */
+.sd-sidebar-card {
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.015);
+}
+
+.sd-sidebar-header-title {
+  font-family: 'Afacad-SemiBold' !important;
+  font-size: 18px;
+  font-weight: 600;
+  color: #3C4D4B;
+  padding: 20px 20px 14px 20px;
+  border-bottom: 1px solid #f3f5f5;
+}
+
+.sd-sidebar-ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sd-sidebar-li-item {
+  display: flex;
+  align-items: center;
+  padding: 11px 20px;
+  border-bottom: 1px solid #f8fbfb;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sd-sidebar-li-item:hover {
+  background-color: #f5f8f8;
+}
+
+.sd-li-icon {
+  color: #000;
+  font-size: 16px;
+}
+
+.sd-li-text {
+  font-size: 16px;
+  color: #3C4D4B;
+  font-weight: 500;
+    font-family: 'Afacad-Medium' !important;
+}
+
+.sd-btn-browse-all {
+  background-color: #cfb28d !important;
+  border-color: #cfb28d !important;
+  color: #4a3b2c !important;
+  font-weight: 500 !important;
+  height: 42px !important;
+  border-radius: 6px !important;
+  font-size: 14px !important;
+  transition: opacity 0.2s;
+      width: 60% !important;
+}
+
+.sd-btn-browse-all:hover {
+  opacity: 0.9;
+}
+
+
+/* ==========================================
+   3. MIDDLE SLIDER / CAROUSEL & CONTENT OVERLAY
+   ========================================== */
+.sd-middle-carousel {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.sd-carousel-slide-item {
+  position: relative;
+  min-height: 280px;
+  background-image: url('../../../public/assets/img/book-gernal.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+.sd-btn-carousel-oa img {
+    margin-right: 9px;
+}
+/* Gold/Brown Warm Tint Overlay matching the image precisely */
+
+
+.sd-carousel-overlay-content {
+  position: relative;
+  z-index: 2;
+  padding: 35px;
+  color: #3C4D4B;
+      max-width: 400px;
+}
+
+.sd-carousel-title {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.35;
+  color: #3C4D4B;
+  margin-bottom: 15px;
+  max-width: 85%;
+}
+
+.sd-carousel-desc {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #000000;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.sd-btn-carousel-oa {
+  background: transparent;
+  border: 1px solid #3C4D4B;
+  padding: 8px 18px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 8px;
+  color: #3C4D4B;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.2s;
+}
+
+.sd-btn-carousel-oa:hover {
+  background-color: rgba(27, 40, 40, 0.05);
+}
+
+
+/* ==========================================
+   4. ARTICLE CARDS & TYPOGRAPHY
+   ========================================== */
+.sd-section-heading-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #3C4D4B;
+  display: flex;
+  align-items: center;
+  
+}
+
+.sd-section-heading-title .anticon-clock-circle {
+    color: #000 !important;
+    font-size: 20px;
+}
+.sd-border-bottom{
+border-bottom: 1px solid #E2E8F0 ;
+padding-bottom: 10px;
+margin-bottom: 20px;
+}
+
+.sd-section-heading-link {
+   font-family: 'Afacad-SemiBold' !important;
+  color: #CFB28D;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.sd-article-item-card {
+  border: 1px solid #E2E8F0;
+  background-color: transparent;
+  border-radius: 12px;
+  padding: 16px 20px;
+}
+
+.sd-art-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #3C4D4B;
+  line-height: 1.4;
+  margin-bottom: 6px;
+}
+
+.sd-art-meta {
+  font-size: 14px;
+  color: #64748B;
+  margin-bottom: 12px;
+}
+
+
+/* ==========================================
+   5. CUSTOM BADGES (STATUS PILLS)
+   ========================================== */
+.sd-badge-pill-status {
+   display: inline-block;
+    align-items: center;
+    font-size: 14px;
+    padding: 9px 17px;
+    border-radius: 4px;
+    font-weight: 400;
+    
+}
+.sd-badge-pill-status img{
+  display: inline-block;
+}
+.oa-color {
+  background-color: #E4DBD1;
+  color: #3C4D4B;
+}
+
+.ra-color {
+      background-color: #E3EEF8;
+    color: #3C4D4B;
+}
+
+
+/* ==========================================
+   6. RIGHT SIDEBAR (RECENT PUBLICATIONS)
+   ========================================== */
+.sd-recent-publications-card {
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+
+.sd-recent-publications-card .sd-section-heading-title.sd-border-bottom {
+    padding: 24px 20px;
+}
+
+.sd-recent-img-wrapper {    max-height: 114px;
+    overflow: hidden;
+    border-radius: 12px;
+    width: 158px;}
+
+.sd-recent-img-wrapper img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.sd-recent-pub-row-item {
+ display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    border: 1px solid #E2E8F0;
+    padding-bottom: 15px;
+    padding: 10px;
+    background: transparent;
+    border-radius: 12px;
+}
+
+
+
+
+.sd-recent-details-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.sd-recent-pub-title {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #223333;
+  margin-bottom: 4px;
+  line-height: 1.35;
+}
+
+.sd-recent-pub-meta {
+  font-size: 14px;
+  color:#64748B;
+  margin-bottom: 6px;
+}
+
+
+.sd-recent-publications-card  .sd-section-heading-title+.d-flex {
+    padding: 24px 20px;
+}
+
+/* ==========================================
+   7. BOTTOM CALL TO ACTION BANNER RIBBON
+   ========================================== */
+.sd-bottom-ribbon-banner {
+  background-color: #d2b897; /* Exact warm khaki/beige tone ribbon */
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  gap: 15px;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.sd-ribbon-icon-box {
+  background-color: #3c4d4b;
+  color: #ffffff;
+  width: 26px;
+  height: 26px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.sd-ribbon-text-msg {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #382918;
+}
+
+/* ==========================================
+   1. SECTION FONTS & GENERAL STYLING
+   ========================================== */
+
+
+.sd-articles-main-heading {
+  font-family: 'Playfair Display', Georgia, serif; /* Matching serif style heading from previous layout */
+  font-size: 34px;
+  font-weight: 500;
+  color: #3c4d4b;
+}
+
+
+/* ==========================================
+   2. ARTICLE CARD MAIN LAYOUT (LIGHT & DARK STRUCTURE)
+   ========================================== */
+.sd-article-card {
+  border-radius: 20px; /* Precise smooth corners from image */
+  overflow: hidden;
+  width: 100%;
+  max-width: 410px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+/* Light Card Specific Colors */
+.sd-light-card {
+  background-color: #ffffff;
+  border: 1px solid #ebf0ef;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.sd-light-card .sd-art-card-title {
+  color: #223333;
+}
+
+.sd-light-card .sd-art-card-desc {
+  color: #778888;
+}
+
+.sd-light-card .sd-meta-text-info {
+  color: #8fa0a0;
+}
+
+.sd-light-card .sd-read-more-link {
+  color: #223333;
+  border-bottom: 1px solid #223333;
+}
+.sd-article-card:hover .sd-read-more-link {
+  color: #223333;
+  border-bottom: 1px solid #223333;
+}
+/* Active Dark Card Specific Colors (Exact matching of image color tone) */
+.sd-active-dark-card,
+.sd-article-card:hover {
+  background-color: #3b4b49; /* Precise deep slate teal tone */
+  border: 1px solid #3b4b49;
+  box-shadow: 0 10px 30px rgba(59, 75, 73, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sd-active-dark-card .sd-art-card-title ,
+.sd-article-card:hover .sd-art-card-title {
+  color: #ffffff;
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sd-active-dark-card .sd-art-card-desc,
+.sd-art-card-title:hover .sd-art-card-desc {
+  color: rgba(255, 255, 255, 0.65); /* soft grey white contrast text */
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sd-active-dark-card .sd-meta-text-info ,
+.sd-art-card-desc:hover .sd-meta-text-info {
+  color: rgba(255, 255, 255, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sd-active-dark-card .sd-read-more-link ,
+.sd-meta-text-info:hover  .sd-read-more-link{
+  color: #cfb28d; /* Golden accent links on dark theme */
+  border-bottom: 1px solid #cfb28d;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+/* ==========================================
+   3. INTERNAL IMAGE BOX WITH GOLD ACCENT STAR
+   ========================================== */
+.sd-card-img-box {
+  position: relative;
+  padding: 16px 16px 0 16px; /* Inset padding inside card frame */
+}
+
+.sd-card-img-box img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 14px; /* Image inner rounding */
+}
+
+/* Replicating the distinct golden cross/star flare asset seen in image */
+.sd-gold-star-accent {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  color: #ffebaa;
+  font-size: 24px;
+  opacity: 0.85;
+  pointer-events: none;
+  animation: pulse 3s infinite;
+}
+
+
+/* ==========================================
+   4. TYPOGRAPHY AND CONTENT SPACING
+   ========================================== */
+.sd-card-body-content {
+  padding: 24px 20px;
+}
+
+.sd-art-card-title {
+  font-size: 16.5px;
+  font-weight: 600;
+  line-height: 1.35;
+  margin-bottom: 12px;
+}
+
+.sd-art-card-desc {
+  font-size: 12px;
+  line-height: 1.6;
+  font-weight: 400;
+  margin-bottom: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden; /* cleanly clamping long text to match structure layout */
+}
+
+
+/* ==========================================
+   5. PROFILE AVATAR & META FOOTER
+   ========================================== */
+.sd-author-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.sd-meta-text-info {
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.sd-read-more-link {
+  font-size: 11px;
+  font-weight: 600;
+  text-decoration: none !important;
+  padding-bottom: 1px;
+  white-space: nowrap;
+}
+
+
+/* ==========================================
+   6. SLIDER CONTROL BUTTONS / NAVIGATION PAGINATION
+   ========================================== */
+.sd-btn-pag-arrow {
+  width: 44px;
+  height: 38px;
+  border: 1px solid #e2e8f0;
+  background-color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.2s;
+  outline: none;
+}
+
+.sd-arrow-left {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  color: #1e293b;
+}
+
+.sd-arrow-right {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  color: #1e293b;
+  margin-left: -1px; /* border overlap collapse */
+}
+
+/* Active Highlight state for pagination arrows matching brownish-khaki hue */
+.sd-btn-pag-arrow:hover {
+  background-color: #cfb28d !important;
+  border-color: #cfb28d !important;
+  color: #4a3b2c !important;
+}
+
+.sd-btn-pag-arrow:hover:not(.active) {
+  background-color: #f8fafc;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.15); opacity: 0.9; }
+  100% { transform: scale(1); opacity: 0.7; }
+}
+
+.artical-sec{
+  background-color: #FBFBFB;
+      padding: 30px 0;
+}
+/* ==========================================
+   1. TOP DARK TEAL BANNER RIBBON
+   ========================================== */
+.sd-oa-section-wrapper {
+  background-color: #ffffff;
+
+  overflow: hidden;
+}
+
+.sd-oa-top-banner {
+  background-color: #3C4D4B; 
+   background-image: url('../../../public/assets/img/sciencedirect-bg.png');
+  color: #ffffff;
+  padding: 45px 0;
+ 
+      position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Left side matrix pattern precisely duplicated from image overlay */
+.sd-oa-banner-dots-left {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  bottom: 15px;
+  width: 60px;
+  opacity: 0.12;
+  background-image: radial-gradient(#ffffff 2px, transparent 2px);
+  background-size: 10px 10px;
+  pointer-events: none;
+}
+
+.sd-oa-lock-icon-box {
+  background-color: #cfb28d; /* Exact soft gold color tone */
+  color: #3c4d4b;
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.sd-oa-banner-heading {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+
+.sd-oa-highlight-gold {
+  color: #cfb28d;
+  font-weight: 600;
+}
+
+.sd-oa-banner-subtext {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #C5C5C5;
+  margin-bottom: 0;
+  max-width: 95%;
+}
+
+.sd-oa-btn-gold {
+  background-color: #cfb28d !important;
+  border-color: #cfb28d !important;
+  color: #4a3b2c !important;
+  font-weight: 500 !important;
+  height: 42px !important;
+  padding: 0 24px !important;
+  border-radius: 6px !important;
+  font-size: 13.5px !important;
+}
+
+.sd-oa-banner-link {
+  color: #ffffff !important;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  opacity: 0.9;
+  transition: opacity 0.2s;
+}
+
+.sd-oa-banner-link:hover {
+  opacity: 1;
+}
+
+
+/* ==========================================
+   2. LOWER CONTENT LEFT SIDE (TYPOGRAPHY & LOGOS)
+   ========================================== */
+   .sd-oa-lower-content {
+    padding: 100px 0 !important;
+    background: #FBFBFB;
+}
+.sd-oa-mini-accent-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #cfb28d;
+  letter-spacing: 0.5px;
+}
+
+.sd-oa-line-accent {
+  font-weight: bold;
+  margin-right: 4px;
+}
+
+.sd-oa-main-title-serif {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 42px;
+  font-weight: 500;
+  color: #3C4D4B;
+  line-height: 1.25;
+}
+
+.sd-oa-title-italic-gold {
+  color: #cfb28d;
+
+}
+
+.sd-oa-left-desc {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #3C4D4B;
+  max-width: 320px;
+}
+
+/* INDEXING BADGE BUTTONS STYLING */
+.sd-oa-logo-card-btn {
+  border: 1px solid #ebefee;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 16px 24px;
+  min-height: 70px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.01);
+  transition: all 0.2s ease;
+}
+
+.sd-oa-logo-card-btn:hover {
+  border-color: #cfb28d;
+  box-shadow: 0 4px 12px rgba(207, 178, 141, 0.1);
+}
+
+.sd-oa-logo-img-wrapper {
+     max-width: 290px;
+    height: 73px;
+}
+
+.sd-oa-brand-img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  filter: grayscale(20%);
+}
+
+.sd-oa-brand-fallback {
+  font-size: 15px;
+  font-weight: 700;
+  color: #334444;
+  letter-spacing: 0.5px;
+}
+
+.sd-oa-logo-arrow {
+  color: #223333;
+  font-size: 15px;
+}
+
+
+/* ==========================================
+   3. LOWER CONTENT RIGHT SIDE (OVERLAPPING SYSTEM)
+   ========================================== */
+.sd-oa-right-image-container {
+  position: relative;
+  width: 100%;
+  padding-right: 120px; /* Leave space layout padding for absolute overlap */
+}
+
+/* Photo Background Container */
+.sd-oa-bg-photo-frame {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Yellowish/Sepia vintage transparent overlay exact matching the image graphic */
+.sd-oa-bg-photo-frame::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(207, 178, 141, 0.5); 
+  mix-blend-mode: multiply;
+  z-index: 1;
+}
+
+.sd-oa-main-bg-img {
+  width: 100%;
+     height: 580px;
+  object-fit: cover;
+  display: block;
+}
+
+/* FLOATING OVERLAP CARD DESIGN POSITIONING */
+.sd-oa-floating-overlap-card {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 350px;
+  background-color: #354543; /* Dark precise warm teal shade */
+  border-radius: 12px;
+  padding: 30px 24px;
+  color: #ffffff;
+  z-index: 5;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+}
+
+.sd-oa-float-icon-box {
+  color: #cfb28d;
+  font-size: 24px;
+}
+
+.sd-oa-float-title {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 2px;
+  position: relative;
+}
+.sd-oa-float-title::before{
+      content: '';
+    width: 90px;
+    height: 1.5px;
+    background-color: #FFFFFF;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+}
+
+.sd-oa-float-tag {
+  font-size: 14px;
+  color: #cfb28d;
+  letter-spacing: 0.5px;
+}
+
+.sd-oa-float-desc {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0;
+}
+
+.sd-oa-float-divider {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* CHECKLIST STYLE */
+.sd-oa-float-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sd-oa-float-checklist li {
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.85);
+  display: flex;
+  align-items: center;
+}
+
+.sd-oa-float-checklist li .anticon {
+  color: #cfb28d; /* Golden bullets */
+  font-size: 13px;
+}
+
+.sd-oa-float-btn-more {
+  background-color: #cfb28d !important;
+  border-color: #cfb28d !important;
+  color: #4a3b2c !important;
+  font-weight: 500 !important;
+  height: 38px !important;
+  font-size: 13px !important;
+  border-radius: 6px !important;
+}
+
+/* Responsive Handling */
+@media (max-width: 991px) {
+  .sd-oa-right-image-container {
+    padding-right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .sd-oa-floating-overlap-card {
+    position: relative;
+    top: 0;
+    transform: translateY(0);
+    width: 100%;
+    max-width: 520px;
+    margin-top: -60px;
+    right: 0;
+  }
+}
+
+/* ==========================================
+   1. MAIN FOOTER BACKGROUND WRAPPER
+   ========================================== */
+.sd-main-footer-section {
+  background-color: #3C4D4B; /* Exact deep teal tone used consistently across modules */
+  position: relative;
+  margin-top: 100px; /* Space allowance for floating search ribbon panel overlay */
+  padding-bottom: 30px;
+  font-family: 'Inter', sans-serif;
+}
+
+/* ==========================================
+   2. FLOATING SEARCH RIBBON OVERLAY
+   ========================================== */
+.sd-footer-search-ribbon {
+  background-color: #cfb28d; /* Exact matching deep beige/khaki gold shade */
+  border-radius: 12px;
+  padding: 30px 40px;
+  position: relative;
+  top: -65px; /* Pull upward to layer over content area boundary precisely */
+  margin-bottom: -15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.sd-ribbon-dots-right {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  bottom: 15px;
+  width: 90px;
+  opacity: 0.25;
+  background-image: radial-gradient(#3c4d4b 1.5px, transparent 1.5px);
+  background-size: 8px 8px;
+  pointer-events: none;
+}
+
+.sd-ribbon-icon-circle {
+  background-color: #3c4d4b;
+  color: #ffffff;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.sd-ribbon-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: #1c2b29;
+}
+
+.sd-ribbon-subtext {
+  font-size: 11.5px;
+  line-height: 1.5;
+  color: #3f3325;
+  max-width: 95%;
+}
+
+/* Form Search Input Controls Styling */
+.sd-custom-search-input {
+  height: 44px !important;
+  border-radius: 6px !important;
+  border: 1px solid #ffffff !important;
+  font-size: 13.5px !important;
+}
+
+.sd-custom-select-topic {
+  width: 150px !important;
+  height: 44px !important;
+}
+
+.sd-custom-select-topic .ant-select-selector {
+  border-radius: 6px !important;
+  height: 44px !important;
+  align-items: center !important;
+  border: 1px solid #ffffff !important;
+  font-size: 13.5px !important;
+}
+
+.sd-btn-search-trigger {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+  color: #1c2b29 !important;
+  font-weight: 500 !important;
+  height: 44px !important;
+  padding: 0 22px !important;
+  border-radius: 6px !important;
+  font-size: 13.5px !important;
+  transition: opacity 0.2s;
+}
+
+.sd-btn-search-trigger:hover {
+  opacity: 0.9;
+}
+
+
+/* ==========================================
+   3. MIDDLE GRID CONTENT LINKS
+   ========================================== */
+.sd-footer-links-grid {
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+.sd-brand-name-text {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 25px;
+  font-weight: 500;
+  color: #cfb28d; /* Golden main title accent */
+}
+
+.sd-footer-logo-tree {
+  max-height: 28px;
+  object-fit: contain;
+  filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(330deg); /* Adjust grayscale image context matching gold tint */
+}
+
+.sd-brand-description-para {
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 90%;
+}
+
+.sd-social-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.sd-social-icon-circle {
+  width: 34px;
+  height: 34px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.sd-social-icon-circle:hover {
+  background-color: #cfb28d;
+  color: #3c4d4b !important;
+}
+
+/* NAVIGATION LINKS COLUMNS */
+.sd-footer-col-heading {
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 25px;
+}
+
+.sd-footer-ul-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sd-footer-ul-links li a {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.sd-footer-ul-links li a:hover {
+  color: #cfb28d;
+}
+
+.sd-contact-highlight-li {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+
+/* ==========================================
+   4. BASE FOOTER RIGHTS BAR
+   ========================================== */
+.sd-footer-bottom-basebar {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 30px;
+}
+
+.sd-copyright-text {
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.sd-basebar-links-row a {
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.sd-basebar-links-row a:hover {
+  color: #cfb28d;
+}
+
+
+/* ==========================================
+   5. RESPONSIVE UTILITIES
+   ========================================== */
+@media (max-width: 1199px) {
+  .sd-footer-search-ribbon {
+    top: 0;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .sd-main-footer-section {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .sd-search-inputs-row {
+    flex-direction: column;
+  }
+  .sd-custom-select-topic {
+    width: 100% !important;
+  }
+}
