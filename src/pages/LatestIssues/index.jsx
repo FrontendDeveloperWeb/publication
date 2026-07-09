@@ -24,18 +24,15 @@ import {
   BankOutlined,
   AimOutlined,
   ExportOutlined,
-
-
   NotificationOutlined,
-
   FilePdfOutlined,
-
-
 } from '@ant-design/icons';
 
 const { Option } = Select;
 
 export default function LatestIssues() {
+  // Shared tab state — switching Abstract/Graphical abstract updates every card at once
+  // (matches the reference screenshots, where both cards flip together)
   const [activeTab, setActiveTab] = useState('abstract');
   const [currentPage, setCurrentPage] = useState(1);
   const [showPreviews, setShowPreviews] = useState(false);
@@ -87,9 +84,9 @@ export default function LatestIssues() {
   const indexOfLastItem = currentPage * pageSize;
   const indexOfFirstItem = indexOfLastItem - pageSize;
   const currentArticlesForPage = allArticles.slice(indexOfFirstItem, indexOfLastItem);
+
   return (
     <>
-
       <section className='journal-sec'>
         <div className="sd-hero-container">
 
@@ -101,8 +98,6 @@ export default function LatestIssues() {
                 {/* LEFT SIDE: STANDALONE FLOATING BOOK/JOURNAL COVER */}
                 <div className="col-12 col-md-5 col-lg-5 offset-lg-1 d-flex justify-content-center justify-content-md-center">
                   <div className="sd-jb-book-cover-shadow-box">
-                    {/* Using a placeholder rendering identical layouts of the book cover */}
-
                     <img
                       src="/assets/img/golf-banner.png"
                       alt="Golf Simplified Cover"
@@ -147,17 +142,12 @@ export default function LatestIssues() {
                 </div>
               </div>
             </div>
-
           </div>
-
-          {/* FLOATING TAN SEARCH CONTAINER */}
-
-
         </div>
       </section>
+
       <section className='stat-sec'>
         <div className="sd-stats-bar">
-
           <div className="sd-stats-container">
             <div className="sd-stat-item">
               <img src="public/assets/img/articles-chapters.png" alt="" />
@@ -188,9 +178,9 @@ export default function LatestIssues() {
               </div>
             </div>
           </div>
-
         </div>
       </section>
+
       <section>
         <div className="sd-ae-dashboard-wrapper py-4">
           <div className="container" style={{ maxWidth: '1280px' }}>
@@ -219,6 +209,7 @@ export default function LatestIssues() {
 
               {/* ================= LEFT CONTROLS & SIDEBAR PANEL ================= */}
               <div className="col-12 col-md-4 col-lg-3">
+
                 <div className="sd-ae-volume-status-card mb-3 text-white">
                   <div className="sd-jl-call-body">
                     <div className="sd-jl-circle-search-badge mb-2">
@@ -232,7 +223,6 @@ export default function LatestIssues() {
                       <DownloadOutlined /> Download full issue
                     </Button>
                   </div>
-
                 </div>
 
                 <div className="sd-ae-sidebar-action-box p-3 border rounded bg-white mb-3">
@@ -246,9 +236,8 @@ export default function LatestIssues() {
                       <ExportOutlined /> Export citations
                     </Button>
                   </div>
-                  <div className=" pt-2 border-top">
+                  <div className="pt-2 border-top">
                     <Switch size="small" checked={showPreviews} onChange={(checked) => setShowPreviews(checked)} /> <span className="small text-secondary font-weight-medium">Show all article previews</span>
-
                   </div>
                 </div>
 
@@ -379,7 +368,6 @@ export default function LatestIssues() {
           </div>
         </div>
       </section>
-
 
     </>
   );
