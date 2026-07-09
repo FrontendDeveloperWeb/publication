@@ -2203,6 +2203,12 @@ p {
   text-decoration: underline;
 }
 
+.sd-ae-nav-chevron {
+  font-size: 10px;
+  color: #889999;
+  margin-left: 2px;
+}
+
 /* Base Primary Button Tokens overrides */
 .sd-ae-btn-dark-teal {
   background-color: #3C4D4B !important;
@@ -2310,9 +2316,14 @@ p {
    3. MAIN WORKSPACE: ALERTS & MAIN SHEET 
    ========================================== */
 .sd-ae-updates-alert-ribbon {
-  background-color: #f0e6d9;
+  background-image: url("../../../public/assets/img/updated-bg.png");
+  background-position: right;
+  background-size: cover;
+  background-repeat: no-repeat;
   /* Light khaki background canvas wrapper tint */
   border: 1px solid rgba(207, 178, 141, 0.3);
+  padding: 22px 20px;
+  border-radius: 8px;
 }
 
 .sd-ae-bell-alert-badge {
@@ -2328,18 +2339,28 @@ p {
 }
 
 .sd-ae-btn-volume-switch {
-  border: 1px solid #dbe3e2 !important;
-  color: #556666 !important;
+  border: 1px solid #E2E8F0 !important;
+  color: #3C4D4B !important;
   background: #ffffff !important;
   font-weight: 500 !important;
+  padding: 20px !important;
 }
 
 .sd-ae-section-category-title {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 22px;
+  font-size: 32px;
   color: #1c2b29;
-  font-style: italic;
   border-color: #ebf1f0 !important;
+  position: relative;
+}
+
+.sd-ae-section-category-title::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  width: 66%;
+  height: 1px;
+  background-color: #3C4D4B;
+  top: 48%;
 }
 
 
@@ -2367,21 +2388,35 @@ p {
 }
 
 .sd-ae-action-pill-btn {
-  font-size: 12px !important;
-  color: #556666 !important;
-  background-color: #f4f7f6 !important;
-  border: none !important;
+  font-family: 'Afacad-Medium' !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  border: 1px solid transparent !important;
+  padding: 16px 15px !important;
+}
+
+.sd-ae-action-pill-btn.beige {
+  color: #3C4D4B !important;
+  background-color: #E4DBD1 !important;
+}
+
+.sd-ae-action-pill-btn.transparent {
+  color: #3C4D4B !important;
+  background-color: transparent !important;
+  border: 1px solid #3C4D4B !important;
+
 }
 
 .sd-ae-article-main-headline {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 17.5px;
-  color: #1c2b29;
+  font-size: 20px;
+  color: #3C4D4B;
   font-weight: 600;
   line-height: 1.4;
+  max-width: 500px;
 }
 
 .sd-ae-article-authors-text {
+  color: #64748B !important;
   font-size: 13px;
 }
 
@@ -2390,6 +2425,24 @@ p {
 }
 
 /* Tab controls layout inside article core body block */
+.ant-tabs-nav .ant-tabs-tab .ant-tabs-tab-btn {
+  font-family: 'Afacad-Medium' !important;
+  font-weight: 500 !important;
+  font-size: 18px !important;
+  color: #3C4D4B !important;
+}
+
+.ant-tabs-nav .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  font-size: 18px !important;
+  color: #3C4D4B !important;
+}
+
+:where(.css-dev-only-do-not-override-1pi45l5).ant-tabs .ant-tabs-ink-bar {
+  position: absolute;
+  background: #3C4D4B !important;
+  pointer-events: none;
+}
+
 .sd-ae-interactive-tabs-header-strip {
   border-color: #ebf1f0 !important;
 }
@@ -2422,9 +2475,9 @@ p {
 
 /* Inner Typographic Abstract Content Streams */
 .sd-ae-body-sub-title {
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 700;
-  color: #1c2b29;
+  color: #3C4D4B;
 }
 
 .sd-ae-body-paragraph-text {
@@ -2433,13 +2486,60 @@ p {
   text-align: justify;
 }
 
+.text-khaki-gold {
+  font-family: 'Afacad-Medium' !important;
+  color: #cfb28d !important;
+  font-size: 22px;
+  font-weight: 500 !important;
+}
+
+.sd-ae-abstract-icon-frame {
+  background-color: #CFB28D;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+
+}
+
+/* Editorial board list entry (non-tabbed, sits above the article cards) */
+.sd-ae-editorial-board-row {
+  border-color: #ebf1f0 !important;
+}
+
+/* Graphical abstract framed image inside the article tab */
+.sd-ae-graphical-abstract-frame {
+  border: 1px solid #ebf1f0;
+  border-radius: 6px;
+  background-color: #fafbfb;
+  padding: 16px;
+  text-align: center;
+}
+
+.sd-ae-graphical-abstract-frame img {
+  max-height: 260px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
 .sd-ae-updates-alert-ribbon h6 {
-  font-size: 30px;
+  font-size: 20px;
+  color: #3C4D4B;
+}
+
+.sd-ae-updates-alert-ribbon .sd-ae-btn-dark-teal {
+  padding: 24px 36px !important;
 }
 
 .sd-ae-updates-alert-ribbon h6+p {
   font-size: 14px;
   color: #000000 !important;
+  max-width: 400px;
 }
 
 /* ==========================================
