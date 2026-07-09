@@ -1,32 +1,45 @@
 /* ==========================================
    1. GLOBAL STYLES & RESET
    ========================================== */
-*{
+* {
   padding: 0;
   margin: 0;
 }
 
 @font-face {
-    font-family: 'Afacad-Regular';
-    src: url('/public/assets/fonts/Afacad/static/Afacad-Regular.ttf');
+  font-family: 'Afacad-Regular';
+  src: url('/public/assets/fonts/Afacad/static/Afacad-Regular.ttf');
 }
+
 @font-face {
-    font-family: 'Afacad-Medium';
-    src: url('/public/assets/fonts/Afacad/static/Afacad-Medium.ttf');
+  font-family: 'Afacad-Bold';
+  src: url('/public/assets/fonts/Afacad/static/Afacad-Bold.ttf');
 }
+
 @font-face {
-    font-family: 'Philosopher-Bold';
-    src: url('/public/assets/fonts/Philosopher/Philosopher-Bold.ttf');
+  font-family: 'Afacad-Medium';
+  src: url('/public/assets/fonts/Afacad/static/Afacad-Medium.ttf');
 }
+
 @font-face {
-    font-family: 'Afacad-SemiBold';
-    src: url('/public/assets/fonts/Afacad/static/Afacad-SemiBold.ttf');
+  font-family: 'Philosopher-Bold';
+  src: url('/public/assets/fonts/Philosopher/Philosopher-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Afacad-SemiBold';
+  src: url('/public/assets/fonts/Afacad/static/Afacad-SemiBold.ttf');
 }
 
 
 /* Apply it to your elements */
-h1 ,h2,h3,h4,h5,h6{
-    font-family: 'Philosopher-Bold' !important;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Philosopher-Bold' !important;
 }
 
 body {
@@ -69,7 +82,12 @@ ul {
   padding: 0;
 }
 
-h2, h3, h4, h5, h6, p {
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin: 0;
 }
 
@@ -84,7 +102,7 @@ h2, h3, h4, h5, h6, p {
 }
 
 .header {
-    padding: 15px 0;
+  padding: 15px 0;
 }
 
 .container {
@@ -94,7 +112,7 @@ h2, h3, h4, h5, h6, p {
 .custom-btn {
   width: fit-content;
   padding: 10px 30px;
-  border-radius: 8px; 
+  border-radius: 8px;
   border: 1px solid transparent;
 }
 
@@ -110,7 +128,7 @@ h2, h3, h4, h5, h6, p {
 }
 
 .list-area li {
-    padding-left: 20px;
+  padding-left: 20px;
 }
 
 
@@ -205,11 +223,11 @@ h2, h3, h4, h5, h6, p {
 }
 
 .sd-card-1 {
-    background-color: #ffffff !important;
-    top: -76px;
-    left: 11%;
-    transform: rotate(-4.5deg);
-    z-index: 3;
+  background-color: #ffffff !important;
+  top: -76px;
+  left: 11%;
+  transform: rotate(-4.5deg);
+  z-index: 3;
 }
 
 .sd-card-2 {
@@ -247,15 +265,16 @@ h2, h3, h4, h5, h6, p {
 }
 
 .sd-card-footer-text {
-     font-size: 14px;
-    color: #64748B !important;
+  font-size: 14px;
+  color: #64748B !important;
 }
 
 
 
 
 .sd-search-panel {
-  background-color: #CFB28D !important; /* Exact light brown color */
+  background-color: #CFB28D !important;
+  /* Exact light brown color */
   border-radius: 4px;
   padding: 30px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
@@ -283,7 +302,7 @@ h2, h3, h4, h5, h6, p {
   color: rgba(34, 51, 51, 0.65) !important;
 }
 
-.sd-search-panel .ant-input:focus, 
+.sd-search-panel .ant-input:focus,
 .sd-search-panel .ant-input:hover {
   border-color: #2c3e3f !important;
   background-color: rgba(255, 255, 255, 0.35) !important;
@@ -319,14 +338,14 @@ h2, h3, h4, h5, h6, p {
 
 /* Popular filter badges pill shape */
 .sd-badge-pill {
-     background-color: #ffffff !important;
-    color: #2c3e3f !important;
-    padding: 6px 11px;
-    border-radius: 20px;
-    font-size: 14px;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    display: inline-block;
-    cursor: pointer;
+  background-color: #ffffff !important;
+  color: #2c3e3f !important;
+  padding: 6px 11px;
+  border-radius: 20px;
+  font-size: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  display: inline-block;
+  cursor: pointer;
 }
 
 /* Advanced Dropdown Action Font Parameters */
@@ -340,19 +359,21 @@ h2, h3, h4, h5, h6, p {
 }
 
 .sd-search-btn .anticon {
-    font-size: 16px;
-    margin-right: 2px;
+  font-size: 16px;
+  margin-right: 2px;
 }
+
 /* ==========================================
    1. TOP STATS BAR WITH DOT BACKGROUNDS
    ========================================== */
 .sd-content-section {
   background-color: #ffffff;
 
- 
+
 }
-.sd-content-section .sd-title{
- font-size: 38px;
+
+.sd-content-section .sd-title {
+  font-size: 38px;
   font-weight: 600;
   color: #ffffff;
   margin: 0;
@@ -360,15 +381,16 @@ h2, h3, h4, h5, h6, p {
 }
 
 .sd-stats-bar {
-  background-color: #3C4D4B; /* Dark Teal exact match */
+  background-color: #3C4D4B;
+  /* Dark Teal exact match */
   color: #ffffff;
-  padding:45px 20px;
+  padding: 45px 20px;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-   background-image: url("../../../public/assets/img/banner-bottom-bg.png");
+  background-image: url("../../../public/assets/img/banner-bottom-bg.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -390,13 +412,14 @@ h2, h3, h4, h5, h6, p {
 
 .sd-stat-icon {
   font-size: 32px;
-  color: #CFB28D; /* Gold Accent */
+  color: #CFB28D;
+  /* Gold Accent */
 }
 
 
 .sd-stat-item p {
   font-size: 16px;
-  color:  #C5C5C5;
+  color: #C5C5C5;
   margin: 0;
 }
 
@@ -492,7 +515,7 @@ h2, h3, h4, h5, h6, p {
   font-size: 16px;
   color: #3C4D4B;
   font-weight: 500;
-    font-family: 'Afacad-Medium' !important;
+  font-family: 'Afacad-Medium' !important;
 }
 
 .sd-btn-browse-all {
@@ -504,7 +527,7 @@ h2, h3, h4, h5, h6, p {
   border-radius: 6px !important;
   font-size: 14px !important;
   transition: opacity 0.2s;
-      width: 60% !important;
+  width: 60% !important;
 }
 
 .sd-btn-browse-all:hover {
@@ -528,9 +551,11 @@ h2, h3, h4, h5, h6, p {
   background-position: center;
   border-radius: 10px;
 }
+
 .sd-btn-carousel-oa img {
-    margin-right: 9px;
+  margin-right: 9px;
 }
+
 /* Gold/Brown Warm Tint Overlay matching the image precisely */
 
 
@@ -539,7 +564,7 @@ h2, h3, h4, h5, h6, p {
   z-index: 2;
   padding: 35px;
   color: #3C4D4B;
-      max-width: 400px;
+  max-width: 400px;
 }
 
 .sd-carousel-title {
@@ -587,21 +612,22 @@ h2, h3, h4, h5, h6, p {
   color: #3C4D4B;
   display: flex;
   align-items: center;
-  
+
 }
 
 .sd-section-heading-title .anticon-clock-circle {
-    color: #000 !important;
-    font-size: 20px;
+  color: #000 !important;
+  font-size: 20px;
 }
-.sd-border-bottom{
-border-bottom: 1px solid #E2E8F0 ;
-padding-bottom: 10px;
-margin-bottom: 20px;
+
+.sd-border-bottom {
+  border-bottom: 1px solid #E2E8F0;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .sd-section-heading-link {
-   font-family: 'Afacad-SemiBold' !important;
+  font-family: 'Afacad-SemiBold' !important;
   color: #CFB28D;
   font-size: 16px;
   font-weight: 600;
@@ -634,25 +660,27 @@ margin-bottom: 20px;
    5. CUSTOM BADGES (STATUS PILLS)
    ========================================== */
 .sd-badge-pill-status {
-   display: inline-block;
-    align-items: center;
-    font-size: 14px;
-    padding: 9px 17px;
-    border-radius: 4px;
-    font-weight: 400;
-    
+  display: inline-block;
+  align-items: center;
+  font-size: 14px;
+  padding: 9px 17px;
+  border-radius: 4px;
+  font-weight: 400;
+
 }
-.sd-badge-pill-status img{
+
+.sd-badge-pill-status img {
   display: inline-block;
 }
+
 .oa-color {
   background-color: #E4DBD1;
   color: #3C4D4B;
 }
 
 .ra-color {
-      background-color: #E3EEF8;
-    color: #3C4D4B;
+  background-color: #E3EEF8;
+  color: #3C4D4B;
 }
 
 
@@ -667,29 +695,31 @@ margin-bottom: 20px;
 
 
 .sd-recent-publications-card .sd-section-heading-title.sd-border-bottom {
-    padding: 24px 20px;
+  padding: 24px 20px;
 }
 
-.sd-recent-img-wrapper {    max-height: 114px;
-    overflow: hidden;
-    border-radius: 12px;
-    width: 158px;}
+.sd-recent-img-wrapper {
+  max-height: 114px;
+  overflow: hidden;
+  border-radius: 12px;
+  width: 158px;
+}
 
 .sd-recent-img-wrapper img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .sd-recent-pub-row-item {
- display: flex;
-    gap: 15px;
-    align-items: flex-start;
-    border: 1px solid #E2E8F0;
-    padding-bottom: 15px;
-    padding: 10px;
-    background: transparent;
-    border-radius: 12px;
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  border: 1px solid #E2E8F0;
+  padding-bottom: 15px;
+  padding: 10px;
+  background: transparent;
+  border-radius: 12px;
 }
 
 
@@ -710,20 +740,21 @@ margin-bottom: 20px;
 
 .sd-recent-pub-meta {
   font-size: 14px;
-  color:#64748B;
+  color: #64748B;
   margin-bottom: 6px;
 }
 
 
-.sd-recent-publications-card  .sd-section-heading-title+.d-flex {
-    padding: 24px 20px;
+.sd-recent-publications-card .sd-section-heading-title+.d-flex {
+  padding: 24px 20px;
 }
 
 /* ==========================================
    7. BOTTOM CALL TO ACTION BANNER RIBBON
    ========================================== */
 .sd-bottom-ribbon-banner {
-  background-color: #d2b897; /* Exact warm khaki/beige tone ribbon */
+  background-color: #d2b897;
+  /* Exact warm khaki/beige tone ribbon */
   border-radius: 6px;
   display: flex;
   align-items: center;
@@ -757,7 +788,8 @@ margin-bottom: 20px;
 
 
 .sd-articles-main-heading {
-  font-family: 'Playfair Display', Georgia, serif; /* Matching serif style heading from previous layout */
+  font-family: 'Playfair Display', Georgia, serif;
+  /* Matching serif style heading from previous layout */
   font-size: 34px;
   font-weight: 500;
   color: #3c4d4b;
@@ -768,7 +800,8 @@ margin-bottom: 20px;
    2. ARTICLE CARD MAIN LAYOUT (LIGHT & DARK STRUCTURE)
    ========================================== */
 .sd-article-card {
-  border-radius: 20px; /* Precise smooth corners from image */
+  border-radius: 20px;
+  /* Precise smooth corners from image */
   overflow: hidden;
   width: 100%;
   max-width: 410px;
@@ -799,40 +832,45 @@ margin-bottom: 20px;
   color: #223333;
   border-bottom: 1px solid #223333;
 }
+
 .sd-article-card:hover .sd-read-more-link {
   color: #223333;
   border-bottom: 1px solid #223333;
 }
+
 /* Active Dark Card Specific Colors (Exact matching of image color tone) */
 .sd-active-dark-card,
 .sd-article-card:hover {
-  background-color: #3b4b49; /* Precise deep slate teal tone */
+  background-color: #3b4b49;
+  /* Precise deep slate teal tone */
   border: 1px solid #3b4b49;
   box-shadow: 0 10px 30px rgba(59, 75, 73, 0.15);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.sd-active-dark-card .sd-art-card-title ,
+.sd-active-dark-card .sd-art-card-title,
 .sd-article-card:hover .sd-art-card-title {
   color: #ffffff;
-     transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .sd-active-dark-card .sd-art-card-desc,
 .sd-art-card-title:hover .sd-art-card-desc {
-  color: rgba(255, 255, 255, 0.65); /* soft grey white contrast text */
-   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: rgba(255, 255, 255, 0.65);
+  /* soft grey white contrast text */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.sd-active-dark-card .sd-meta-text-info ,
+.sd-active-dark-card .sd-meta-text-info,
 .sd-art-card-desc:hover .sd-meta-text-info {
   color: rgba(255, 255, 255, 0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.sd-active-dark-card .sd-read-more-link ,
-.sd-meta-text-info:hover  .sd-read-more-link{
-  color: #cfb28d; /* Golden accent links on dark theme */
+.sd-active-dark-card .sd-read-more-link,
+.sd-meta-text-info:hover .sd-read-more-link {
+  color: #cfb28d;
+  /* Golden accent links on dark theme */
   border-bottom: 1px solid #cfb28d;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -843,14 +881,16 @@ margin-bottom: 20px;
    ========================================== */
 .sd-card-img-box {
   position: relative;
-  padding: 16px 16px 0 16px; /* Inset padding inside card frame */
+  padding: 16px 16px 0 16px;
+  /* Inset padding inside card frame */
 }
 
 .sd-card-img-box img {
   width: 100%;
   height: 250px;
   object-fit: cover;
-  border-radius: 14px; /* Image inner rounding */
+  border-radius: 14px;
+  /* Image inner rounding */
 }
 
 /* Replicating the distinct golden cross/star flare asset seen in image */
@@ -888,7 +928,8 @@ margin-bottom: 20px;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-  overflow: hidden; /* cleanly clamping long text to match structure layout */
+  overflow: hidden;
+  /* cleanly clamping long text to match structure layout */
 }
 
 
@@ -943,7 +984,8 @@ margin-bottom: 20px;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
   color: #1e293b;
-  margin-left: -1px; /* border overlap collapse */
+  margin-left: -1px;
+  /* border overlap collapse */
 }
 
 /* Active Highlight state for pagination arrows matching brownish-khaki hue */
@@ -958,15 +1000,27 @@ margin-bottom: 20px;
 }
 
 @keyframes pulse {
-  0% { transform: scale(1); opacity: 0.7; }
-  50% { transform: scale(1.15); opacity: 0.9; }
-  100% { transform: scale(1); opacity: 0.7; }
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+
+  50% {
+    transform: scale(1.15);
+    opacity: 0.9;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
 }
 
-.artical-sec{
+.artical-sec {
   background-color: #FBFBFB;
-      padding: 30px 0;
+  padding: 30px 0;
 }
+
 /* ==========================================
    1. TOP DARK TEAL BANNER RIBBON
    ========================================== */
@@ -977,15 +1031,15 @@ margin-bottom: 20px;
 }
 
 .sd-oa-top-banner {
-  background-color: #3C4D4B; 
-   background-image: url('../../../public/assets/img/sciencedirect-bg.png');
+  background-color: #3C4D4B;
+  background-image: url('../../../public/assets/img/sciencedirect-bg.png');
   color: #ffffff;
   padding: 45px 0;
- 
-      position: relative;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* Left side matrix pattern precisely duplicated from image overlay */
@@ -1002,7 +1056,8 @@ margin-bottom: 20px;
 }
 
 .sd-oa-lock-icon-box {
-  background-color: #cfb28d; /* Exact soft gold color tone */
+  background-color: #cfb28d;
+  /* Exact soft gold color tone */
   color: #3c4d4b;
   width: 44px;
   height: 44px;
@@ -1062,10 +1117,11 @@ margin-bottom: 20px;
 /* ==========================================
    2. LOWER CONTENT LEFT SIDE (TYPOGRAPHY & LOGOS)
    ========================================== */
-   .sd-oa-lower-content {
-    padding: 100px 0 !important;
-    background: #FBFBFB;
+.sd-oa-lower-content {
+  padding: 100px 0 !important;
+  background: #FBFBFB;
 }
+
 .sd-oa-mini-accent-title {
   font-size: 18px;
   font-weight: 600;
@@ -1116,8 +1172,8 @@ margin-bottom: 20px;
 }
 
 .sd-oa-logo-img-wrapper {
-     max-width: 290px;
-    height: 73px;
+  max-width: 290px;
+  height: 73px;
 }
 
 .sd-oa-brand-img {
@@ -1146,7 +1202,8 @@ margin-bottom: 20px;
 .sd-oa-right-image-container {
   position: relative;
   width: 100%;
-  padding-right: 120px; /* Leave space layout padding for absolute overlap */
+  padding-right: 120px;
+  /* Leave space layout padding for absolute overlap */
 }
 
 /* Photo Background Container */
@@ -1166,14 +1223,14 @@ margin-bottom: 20px;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(207, 178, 141, 0.5); 
+  background-color: rgba(207, 178, 141, 0.5);
   mix-blend-mode: multiply;
   z-index: 1;
 }
 
 .sd-oa-main-bg-img {
   width: 100%;
-     height: 580px;
+  height: 580px;
   object-fit: cover;
   display: block;
 }
@@ -1185,7 +1242,8 @@ margin-bottom: 20px;
   top: 50%;
   transform: translateY(-50%);
   width: 350px;
-  background-color: #354543; /* Dark precise warm teal shade */
+  background-color: #354543;
+  /* Dark precise warm teal shade */
   border-radius: 12px;
   padding: 30px 24px;
   color: #ffffff;
@@ -1204,14 +1262,15 @@ margin-bottom: 20px;
   margin-bottom: 2px;
   position: relative;
 }
-.sd-oa-float-title::before{
-      content: '';
-    width: 90px;
-    height: 1.5px;
-    background-color: #FFFFFF;
-    position: absolute;
-    left: 0;
-    bottom: 0px;
+
+.sd-oa-float-title::before {
+  content: '';
+  width: 90px;
+  height: 1.5px;
+  background-color: #FFFFFF;
+  position: absolute;
+  left: 0;
+  bottom: 0px;
 }
 
 .sd-oa-float-tag {
@@ -1249,7 +1308,8 @@ margin-bottom: 20px;
 }
 
 .sd-oa-float-checklist li .anticon {
-  color: #cfb28d; /* Golden bullets */
+  color: #cfb28d;
+  /* Golden bullets */
   font-size: 13px;
 }
 
@@ -1271,6 +1331,7 @@ margin-bottom: 20px;
     flex-direction: column;
     align-items: center;
   }
+
   .sd-oa-floating-overlap-card {
     position: relative;
     top: 0;
@@ -1286,9 +1347,14 @@ margin-bottom: 20px;
    1. MAIN FOOTER BACKGROUND WRAPPER
    ========================================== */
 .sd-main-footer-section {
-  background-color: #3C4D4B; /* Exact deep teal tone used consistently across modules */
+  background-image: url('../../../public/assets/img/footer-bg.png');
+  /* Exact deep teal tone used consistently across modules */
+  background-position: right;
+  background-size: cover;
+  background-repeat: no-repeat;
   position: relative;
-  margin-top: 100px; /* Space allowance for floating search ribbon panel overlay */
+  margin-top: 100px;
+  /* Space allowance for floating search ribbon panel overlay */
   padding-bottom: 30px;
   font-family: 'Inter', sans-serif;
 }
@@ -1297,13 +1363,18 @@ margin-bottom: 20px;
    2. FLOATING SEARCH RIBBON OVERLAY
    ========================================== */
 .sd-footer-search-ribbon {
-  background-color: #cfb28d; /* Exact matching deep beige/khaki gold shade */
-  border-radius: 12px;
-  padding: 30px 40px;
+  background-image: url('../../../public/assets/img/footer-top-bg.png');
+  background-position: right;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 30px 56px;
   position: relative;
-  top: -65px; /* Pull upward to layer over content area boundary precisely */
+  top: -65px;
+  /* Pull upward to layer over content area boundary precisely */
   margin-bottom: -15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  max-width: 1090px;
+  margin: 0 auto;
 }
 
 .sd-ribbon-dots-right {
@@ -1318,31 +1389,22 @@ margin-bottom: 20px;
   pointer-events: none;
 }
 
-.sd-ribbon-icon-circle {
-  background-color: #3c4d4b;
-  color: #ffffff;
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  flex-shrink: 0;
-}
 
 .sd-ribbon-title {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 24px;
+  font-size: 40px;
   font-weight: 500;
-  color: #1c2b29;
+  color: #3C4D4B;
+}
+
+.sd-ribbon-icon-circle img {
+  width: 56px;
 }
 
 .sd-ribbon-subtext {
-  font-size: 11.5px;
+  font-size: 14px;
   line-height: 1.5;
-  color: #3f3325;
-  max-width: 95%;
+  color: #000;
+  max-width: 70%;
 }
 
 /* Form Search Input Controls Styling */
@@ -1395,31 +1457,27 @@ margin-bottom: 20px;
   font-family: 'Playfair Display', Georgia, serif;
   font-size: 25px;
   font-weight: 500;
-  color: #cfb28d; /* Golden main title accent */
+  color: #cfb28d;
+  /* Golden main title accent */
 }
 
-.sd-footer-logo-tree {
-  max-height: 28px;
-  object-fit: contain;
-  filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(330deg); /* Adjust grayscale image context matching gold tint */
-}
 
 .sd-brand-description-para {
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.7);
+  color: #FFFFFF;
   max-width: 90%;
 }
 
 .sd-social-title {
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 25px;
   color: #ffffff;
+  font-family: 'Afacad-Bold' !important;
 }
 
 .sd-social-icon-circle {
-  width: 34px;
-  height: 34px;
+  width: 55px;
+  height: 55px;
   background-color: rgba(255, 255, 255, 0.08);
   border-radius: 50%;
   display: inline-flex;
@@ -1438,10 +1496,11 @@ margin-bottom: 20px;
 
 /* NAVIGATION LINKS COLUMNS */
 .sd-footer-col-heading {
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 600;
   color: #ffffff;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
+  font-family: 'Afacad-SemiBold' !important;
 }
 
 .sd-footer-ul-links {
@@ -1450,14 +1509,15 @@ margin-bottom: 20px;
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
 
 .sd-footer-ul-links li a {
-  font-size: 13px;
-  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  color: #FFFFFF;
   text-decoration: none;
   transition: color 0.2s;
+  font-family: 'Afacad-Regular' !important;
 }
 
 .sd-footer-ul-links li a:hover {
@@ -1476,18 +1536,20 @@ margin-bottom: 20px;
 .sd-footer-bottom-basebar {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 30px;
+  padding-right: 90px;
 }
 
 .sd-copyright-text {
-  font-size: 12.5px;
-  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  color: #fff;
 }
 
 .sd-basebar-links-row a {
-  font-size: 12.5px;
-  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  color: #fff;
   text-decoration: none;
   transition: color 0.2s;
+  font-weight: 400;
 }
 
 .sd-basebar-links-row a:hover {
@@ -1504,6 +1566,7 @@ margin-bottom: 20px;
     margin-top: 40px;
     margin-bottom: 40px;
   }
+
   .sd-main-footer-section {
     margin-top: 0;
   }
@@ -1513,7 +1576,983 @@ margin-bottom: 20px;
   .sd-search-inputs-row {
     flex-direction: column;
   }
+
   .sd-custom-select-topic {
     width: 100% !important;
   }
+}
+
+.sd-search-inputs-row input {
+  padding-left: 14px !important;
+  font-family: 'Afacad-Medium' !important;
+  font-size: 16px !important;
+
+}
+
+.sd-search-inputs-row input::-webkit-input-placeholder {
+  color: #3C4D4B;
+}
+
+/* Firefox 19+ */
+.sd-search-inputs-row input::-moz-placeholder {
+  color: #3C4D4B;
+  opacity: 1;
+}
+
+/* IE 10-11 & Edge */
+.sd-search-inputs-row input:-ms-input-placeholder {
+  color: #3C4D4B;
+}
+
+
+/* Jounal page  */
+.journal-sec .sd-search-panel {
+  margin: 0;
+}
+
+.stat-sec {
+  margin: 100px 0;
+}
+
+/* ==========================================
+   1. MAIN ROOT LAYOUT & FONTS
+   ========================================== */
+.sd-jl-container {
+  background-color: #ffffff;
+  font-family: 'Inter', sans-serif;
+}
+
+/* LEFT ACCENT CARD HEADER PROMPT RIBBON */
+.sd-jl-call-papers-box {
+  background-color: #3C4D4B;
+  /* Precise layout dark tone match */
+  border-radius: 6px;
+  color: #ffffff;
+}
+
+.sd-jl-call-body {
+  padding: 24px 20px;
+}
+
+.sd-jl-circle-search-badge {
+  background-color: #CFB28D;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+}
+
+.sd-jl-banner-prompt-title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #ffffff;
+  font-family: 'Afacad-SemiBold' !important;
+}
+
+.text-muted-white {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.sd-jl-banner-action-link {
+  color: #ffffff !important;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: underline !important;
+  text-align: center;
+  font-family: 'Afacad-Medium' !important;
+}
+
+.sd-jl-footer {
+  text-align: center;
+  border-top: 0.5px solid #FFFFFF;
+  padding: 0 0 20px;
+}
+
+/* ==========================================
+   2. FILTER CONTROL PANEL SIDEBAR
+   ========================================== */
+
+.select-area {
+  border: 1px solid #ebf1f0;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 24px 20px;
+}
+
+.sd-jl-filter-group {
+  border: 1px solid #ebf1f0;
+  background-color: #ffffff;
+  border-radius: 8px;
+  /* padding: 24px 20px; */
+}
+
+.sd-jl-filter-group .ant-checkbox-group>div {
+  border-bottom: 1px solid #ebf1f0;
+  padding: 10px 15px;
+}
+
+.sd-jl-filter-main-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #223333;
+}
+
+.sd-jl-select-lbl {
+  font-size: 14px;
+  color: #3C4D4B;
+  font-weight: 500;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.select-area .ant-select {
+  color: #64748B;
+  color: #64748B;
+  padding: 8px 11px;
+  font-family: 'Afacad-Medium' !important;
+}
+
+.sd-jl-antd-select .ant-select-selector {
+  height: 38px !important;
+  border-radius: 6px !important;
+  font-size: 12.5px !important;
+  display: flex;
+  align-items: center;
+  border-color: #dbe3e2 !important;
+}
+
+.sd-jl-group-sub-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #223333;
+  padding: 20px 0 0 20px;
+}
+
+.sd-jl-filter-group>div {
+  border-bottom: 1px solid #ebf1f0;
+  padding: 10px 15px;
+}
+
+/* Checkbox customizations overriding style layers */
+.ant-checkbox-wrapper {
+  font-size: 12.5px !important;
+  color: #445555 !important;
+}
+
+.sd-count-lbl {
+  font-size: 11.5px;
+  color: #8fa0a0;
+}
+
+/* Badge pills filters exact matching color parameters */
+.sd-filter-badge-pill {
+  display: inline-block;
+  font-size: 14px;
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-weight: 500;
+  width: fit-content;
+  font-family: 'Afacad-Medium' !important;
+}
+
+.pill-light-blue {
+  background-color: #E3EEF8;
+  color: #3C4D4B;
+}
+
+.pill-gold-tan {
+  background-color: #E4DBD1;
+  color: #3C4D4B;
+}
+
+.pill-muted-grey {
+  background-color: #CDDDDB;
+  color: #3C4D4B;
+}
+
+
+/* ==========================================
+   3. RIGHT SIDE LIST AND TYPOGRAPHY
+   ========================================== */
+.journal-sec .sd-hero-bg {
+  padding: 70px 0;
+}
+
+.sd-jl-all-titles-head {
+  font-size: 40px;
+  font-weight: 500;
+  color: #223333;
+}
+
+.font-sans {
+  font-family: 'Inter', sans-serif;
+}
+
+.sd-jl-sort-label {
+  font-size: 12.5px;
+}
+
+.sd-jl-sort-dropdown .ant-select-selector {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  font-size: 12.5px !important;
+  font-weight: 500 !important;
+  color: #223333 !important;
+}
+
+.sd-jl-alphabet-divider {
+  position: relative;
+  font-size: 26px;
+  color: #cfb28d;
+  font-style: italic;
+}
+
+.sd-jl-alphabet-divider::after {
+  content: '';
+  position: absolute;
+  width: 97%;
+  height: 1px;
+  background-color: #cfb28d;
+  top: 44%;
+  right: 0;
+}
+
+/* Individual Row items structure formatting */
+.sd-jl-publication-row-item {
+  border-color: #f0f4f3 !important;
+}
+
+.sd-jl-pub-item-title {
+  font-size: 22px;
+  font-weight: 500;
+  color: #223333;
+}
+
+.sd-jl-pub-item-path {
+  font-size: 16px;
+  color: #64748B;
+  font-weight: 400 !important;
+}
+
+/* Badges elements matrix inside list items */
+.sd-item-type-badge {
+  background-color: #E4DBD1;
+  color: #3C4D4B;
+  font-size: 13px;
+  padding: 5px 14px;
+  border-radius: 3px;
+  font-weight: 500;
+}
+
+.sd-item-year-text {
+  font-size: 12px;
+  color: #8fa0a0;
+}
+
+.sd-item-oa-badge-pill {
+  background-color: #E3EEF8;
+  color: #3C4D4B;
+  font-size: 13px;
+  padding: 5px 14px;
+  border-radius: 3px;
+  font-weight: 500;
+}
+
+/* Action view handlers terminals formatting */
+.sd-jl-btn-solid-view {
+  background-color: transparent !important;
+  border-color: transparent !important;
+  color: #223333 !important;
+  height: 36px !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  border-radius: 4px !important;
+  box-shadow: none !important;
+}
+
+.sd-jl-btn-solid-view:hover {
+  background-color: #3c4d4b !important;
+  border-color: #3c4d4b !important;
+  color: #ffffff !important;
+  height: 36px !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  border-radius: 4px !important;
+}
+
+.sd-jl-link-arrow-view {
+  color: #223333 !important;
+  font-weight: 500;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+
+/* ==========================================
+   4. STEPPING PAGINATION BLOCK MECHANISM (EXACT MATCH)
+   ========================================== */
+.sd-jl-pagination-bar-wrapper {
+  gap: 4px;
+}
+
+.sd-jl-items-stack {
+  min-height: 1009px;
+}
+
+.sd-jl-pag-btn-step {
+  width: 36px;
+  height: 36px;
+  background-color: #3c4d4b;
+  /* Base dark color button styling left */
+  color: #ffffff;
+  border: 1px solid #3c4d4b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.sd-jl-pag-btn-step:disabled {
+  background-color: #ffffff;
+  border-color: #e2e8f0;
+  color: #cbd5e1;
+  cursor: not-allowed;
+}
+
+.sd-jl-pag-btn-num {
+  width: 36px;
+  height: 36px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  color: #334155;
+  font-size: 12.5px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+/* Exact layout matching gold active pagination box */
+.sd-jl-pag-btn-num.active-gold {
+  background-color: #cfb28d !important;
+  border-color: #cfb28d !important;
+  color: #4a3b2c !important;
+}
+
+.sd-jl-pag-btn-num:hover:not(.active-gold) {
+  background-color: #f8fafc;
+}
+
+.sd-jl-pag-ellipse {
+  padding: 0 4px;
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.arrow-left {
+  border-radius: 4px 0 0 4px;
+}
+
+.arrow-right {
+  border-radius: 0 4px 4px 0;
+}
+
+/* latest Issues */
+/* ==========================================
+   1. MAIN HERO BANNER WRAPPER FRAME
+   ========================================== */
+.sd-jb-hero-wrapper {
+  background-color: #3C4D4B;
+  /* Exact matching deep slate teal tone */
+  position: relative;
+  min-height: 480px;
+  padding: 60px 0;
+  display: flex;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+}
+
+/* Replicating the background workspace watermark texture layer */
+.sd-jb-hero-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1200&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.12;
+  /* Kept very soft to match dark overlay */
+  mix-blend-mode: overlay;
+  z-index: 1;
+}
+
+/* Background matrix layout dot accent pattern left */
+.sd-jb-dots-left {
+  position: absolute;
+  left: 20px;
+  top: 25%;
+  width: 50px;
+  height: 160px;
+  opacity: 0.2;
+  background-image: radial-gradient(#ffffff 2px, transparent 2px);
+  background-size: 10px 10px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+
+/* ==========================================
+   2. LEFT SIDE: BOOK COVER 3D DEPTH CONTAINER
+   ========================================== */
+.sd-jb-book-cover-shadow-box {
+  position: relative;
+  height: 550px;
+  box-shadow: 15px 20px 40px rgba(0, 0, 0, 0.45), 5px 5px 15px rgba(0, 0, 0, 0.3);
+  background-color: #262421;
+}
+
+/* Realistic vertical book spine crease shadow simulation overlay */
+.sd-jb-book-spine-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 14px;
+  background: linear-gradient(to right,
+      rgba(0, 0, 0, 0.35) 0%,
+      rgba(255, 255, 255, 0.08) 60%,
+      rgba(0, 0, 0, 0.2) 100%);
+  z-index: 10;
+}
+
+.sd-jb-main-cover-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+
+}
+
+/* Precise Text Overlay to replicate the title graphic asset dynamically */
+.sd-jb-internal-text-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  color: #ffffff;
+  text-align: center;
+}
+
+.sd-jb-inner-main-title {
+  font-size: 58px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  line-height: 1;
+  margin-top: 15px;
+  color: #ffffff;
+}
+
+.sd-jb-inner-sub-title {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 4px;
+  margin-top: -5px;
+  color: #ffffff;
+}
+
+.sd-jb-inner-summary-tag {
+  font-size: 9px;
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+  margin-top: 15px;
+  color: rgba(255, 255, 255, 0.75);
+  padding: 0 10px;
+}
+
+.sd-jb-inner-author {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  color: #ffffff;
+}
+
+
+/* ==========================================
+   3. RIGHT SIDE: METADATA & METRIC LAYERS
+   ========================================== */
+.sd-jb-meta-content {
+  position: relative;
+  z-index: 10;
+  max-width: 499px;
+}
+
+.sd-jb-oa-indicator-pill {
+  font-size: 13px;
+  font-weight: 500;
+  color: #cfb28d;
+  /* Gold indicator color */
+  letter-spacing: 0.5px;
+}
+
+.sd-jb-dash-line {
+  margin-right: 6px;
+  font-weight: bold;
+}
+
+.sd-jb-main-heading-serif {
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+.sd-jb-italic-gold-brand {
+  color: #cfb28d;
+  font-weight: 400;
+}
+
+.sd-jb-body-desc {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255);
+  max-width: 620px;
+}
+
+/* Metric Display System Blocks */
+.sd-jb-metric-stat-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.sd-jb-metric-huge-num {
+  font-size: 42px;
+  font-weight: 600;
+  color: #cfb28d;
+  /* High clarity gold numeric display value */
+  line-height: 1;
+}
+
+.sd-jb-metric-label {
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 8px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+
+/* ==========================================
+   4. RESPONSIVE ADJUSTMENTS
+   ========================================== */
+@media (max-width: 767px) {
+  .sd-jb-hero-wrapper {
+    text-align: center;
+    padding: 40px 0;
+  }
+
+  .sd-jb-book-cover-shadow-box {
+    max-width: 240px;
+    height: 320px;
+    margin-bottom: 20px;
+  }
+
+  .sd-jb-main-heading-serif {
+    font-size: 32px;
+  }
+
+  .sd-jb-meta-content .d-flex {
+    justify-content: center;
+    gap: 40px !important;
+  }
+}
+
+/* ==========================================
+   1. GLOBAL SYSTEM RESETS & NAVIGATION 
+   ========================================== */
+.sd-ae-dashboard-wrapper {
+  background-color: #fcfdfd;
+  font-family: 'Inter', sans-serif;
+}
+
+.sd-ae-nav-brand-item {
+  font-size: 14px;
+  color: #556666;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.sd-ae-author-guide-link {
+  font-size: 13px;
+  color: #1c2b29 !important;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* Base Primary Button Tokens overrides */
+.sd-ae-btn-dark-teal {
+  background-color: #3C4D4B !important;
+  border-color: #3C4D4B !important;
+  color: #ffffff !important;
+  font-weight: 500 !important;
+}
+
+.sd-ae-btn-khaki-gold {
+  background-color: #ffffff !important;
+  border-color: #cfb28d !important;
+  color: #cfb28d !important;
+  font-weight: 500 !important;
+}
+
+.sd-ae-btn-khaki-gold-solid {
+  background-color: #cfb28d !important;
+  border-color: #cfb28d !important;
+  color: #3C4D4B !important;
+  font-weight: 600 !important;
+  width: 70% !important;
+  margin: 20px auto 0 auto;
+}
+
+
+/* ==========================================
+   2. LEFT SIDEBAR ASSETS ARCHITECTURE
+   ========================================== */
+.sd-ae-btn-light {
+  font-family: 'Afacad-Medium' !important;
+  font-weight: 500;
+  background: #F3F3F3;
+  border: 1px solid #E2E8F0;
+  padding: 18px !important;
+  color: #1E293B;
+}
+
+.sd-ae-panel-label-title+p {
+  font-size: 14px;
+  color: #3C4D4B;
+}
+
+.sd-ae-volume-status-card {
+  background-color: #3C4D4B;
+  /* Core signature brand dark tone */
+  border-radius: 6px;
+  box-shadow: 0 4px 15px rgba(60, 77, 75, 0.15);
+}
+
+.sd-ae-search-circle-badge {
+  width: 36px;
+  height: 36px;
+  background-color: rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #cfb28d;
+  /* Khaki Gold accent tracking marker */
+  font-size: 16px;
+}
+
+.sd-ae-volume-date {
+  font-size: 14px;
+  color: rgba(255, 255, 255);
+}
+
+.sd-jl-title {
+  color: #CFB28D;
+}
+
+.sd-ae-panel-label-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #3C4D4B;
+}
+
+/* Links List Stack */
+.sd-ae-contents-index-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sd-ae-contents-index-links li a {
+  font-family: 'Afacad-Medium' !important;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #3C4D4B;
+  padding: 8px 10px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.sd-ae-contents-index-links li a:hover,
+.sd-ae-contents-index-links li a.active-item {
+  color: #CFB28D;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+
+/* ==========================================
+   3. MAIN WORKSPACE: ALERTS & MAIN SHEET 
+   ========================================== */
+.sd-ae-updates-alert-ribbon {
+  background-color: #f0e6d9;
+  /* Light khaki background canvas wrapper tint */
+  border: 1px solid rgba(207, 178, 141, 0.3);
+}
+
+.sd-ae-bell-alert-badge {
+  background-color: #3C4D4B;
+  color: #ffffff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.sd-ae-btn-volume-switch {
+  border: 1px solid #dbe3e2 !important;
+  color: #556666 !important;
+  background: #ffffff !important;
+  font-weight: 500 !important;
+}
+
+.sd-ae-section-category-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 22px;
+  color: #1c2b29;
+  font-style: italic;
+  border-color: #ebf1f0 !important;
+}
+
+
+/* ==========================================
+   4. ARTICLE DETAIL ELEMENT & SUB TABS 
+   ========================================== */
+.sd-ae-main-article-card-box {
+  border-color: #ebf1f0 !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.015);
+}
+
+.sd-ae-badge-type {
+  font-size: 11px;
+  color: #556666;
+  font-weight: 500;
+}
+
+.sd-ae-badge-oa {
+  background-color: #e5eff0;
+  color: #356a60;
+  font-size: 10.5px;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-weight: 500;
+}
+
+.sd-ae-action-pill-btn {
+  font-size: 12px !important;
+  color: #556666 !important;
+  background-color: #f4f7f6 !important;
+  border: none !important;
+}
+
+.sd-ae-article-main-headline {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 17.5px;
+  color: #1c2b29;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.sd-ae-article-authors-text {
+  font-size: 13px;
+}
+
+.sd-ae-article-pages-range {
+  font-size: 12px;
+}
+
+/* Tab controls layout inside article core body block */
+.sd-ae-interactive-tabs-header-strip {
+  border-color: #ebf1f0 !important;
+}
+
+.sd-ae-interactive-tab-btn {
+  background: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: #667777;
+  padding: 10px 0;
+  position: relative;
+  cursor: pointer;
+}
+
+.sd-ae-interactive-tab-btn.active {
+  color: #1c2b29;
+  font-weight: 600;
+}
+
+.sd-ae-interactive-tab-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #3C4D4B;
+}
+
+/* Inner Typographic Abstract Content Streams */
+.sd-ae-body-sub-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #1c2b29;
+}
+
+.sd-ae-body-paragraph-text {
+  font-size: 12.5px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.sd-ae-updates-alert-ribbon h6 {
+  font-size: 30px;
+}
+
+.sd-ae-updates-alert-ribbon h6+p {
+  font-size: 14px;
+  color: #000000 !important;
+}
+
+/* ==========================================
+   5. FOOTER MULTI-ROW PAGINATION ELEMENT 
+   ========================================== */
+.sd-ae-global-footer-pagination {
+  border-top: 1px solid #ebf1f0;
+  padding-top: 24px;
+}
+
+.sd-ae-pag-nav-square-btn {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #dbe3e2;
+  background-color: #ffffff;
+  color: #556666;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.sd-ae-pag-nav-square-btn:hover {
+  border-color: #3C4D4B;
+  color: #3C4D4B;
+}
+
+.sd-ae-pag-nav-square-btn.active {
+  background-color: #cfb28d !important;
+  /* Exact targeted khaki pagination accent */
+  border-color: #cfb28d !important;
+  color: #1c2b29 !important;
+  font-weight: 600;
+}
+
+.sd-ae-pag-nav-square-btn.context-next {
+  background-color: #3C4D4B;
+  color: #ffffff;
+  border-color: #3C4D4B;
+}
+
+.sd-ae-pag-nav-square-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.sd-ae-pag-ellipse-spacer {
+  color: #889999;
+  font-size: 10px;
+}
+
+/* Animations token configuration */
+.animate-fade-in {
+  animation: fadeIn 0.25s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(2px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =======================================================
+   ANT DESIGN PAGINATION CUSTOM MATCH OVERRIDES (SQUARE)
+   ======================================================= */
+.sd-ae-custom-antd-pagination .ant-pagination-item {
+  border-radius: 4px !important;
+  border: 1px solid #dbe3e2 !important;
+  background-color: #ffffff !important;
+  width: 32px;
+  height: 32px;
+  line-height: 30px;
+}
+
+.sd-ae-custom-antd-pagination .ant-pagination-item a {
+  color: #556666 !important;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.sd-ae-custom-antd-pagination .ant-pagination-item-active {
+  background-color: #cfb28d !important;
+  /* Khaki Gold background */
+  border-color: #cfb28d !important;
+}
+
+.sd-ae-custom-antd-pagination .ant-pagination-item-active a {
+  color: #1c2b29 !important;
+  font-weight: 600;
+}
+
+.sd-ae-custom-antd-pagination .ant-pagination-prev .ant-pagination-item-link,
+.sd-ae-custom-antd-pagination .ant-pagination-next .ant-pagination-item-link {
+  border-radius: 4px !important;
+  border: 1px solid #dbe3e2 !important;
+  background-color: #ffffff !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sd-ae-custom-antd-pagination .ant-pagination-next .ant-pagination-item-link {
+  background-color: #3C4D4B !important;
+  /* Teal Dark theme on next arrow */
+  color: #ffffff !important;
 }
