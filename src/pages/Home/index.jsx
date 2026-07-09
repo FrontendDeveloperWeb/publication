@@ -133,7 +133,7 @@ export default function Home() {
 
           {/* HERO SECTION WITH TEAL OVERLAY */}
           <div className="sd-hero-bg">
-            <div className="container px-5">
+            <div className="container px-5 ">
               <div className="row">
 
                 {/* LEFT CONTENT AREA */}
