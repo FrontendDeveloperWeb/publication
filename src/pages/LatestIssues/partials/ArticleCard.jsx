@@ -3,7 +3,7 @@ import { EyeOutlined, FileImageOutlined } from '@ant-design/icons';
 
 export default function ArticleCard({ article, activeTab, onTabChange }) {
   return (
-    <div className="sd-ae-main-article-card-box p-4 border rounded bg-white mb-4">
+    <div className="sd-ae-main-article-card-box  mb-4">
 
       {/* Card Header Layer */}
       <div className="d-flex justify-content-between align-items-center mb-2">
@@ -43,16 +43,15 @@ export default function ArticleCard({ article, activeTab, onTabChange }) {
                       <p>Abstract</p>
                     </div>
                   </div>
-                  <h6 className="sd-ae-body-sub-title mb-2">Introduction</h6>
-                  <p className="sd-ae-body-paragraph-text text-secondary mb-3">{article.introduction}</p>
-                  <h6 className="sd-ae-body-sub-title mb-2">Objectives</h6>
-                  <p className="sd-ae-body-paragraph-text text-secondary mb-3">{article.objectives}</p>
-                  <h6 className="sd-ae-body-sub-title mb-2">Methods</h6>
-                  <p className="sd-ae-body-paragraph-text text-secondary mb-3">{article.methods}</p>
-                  <h6 className="sd-ae-body-sub-title mb-2">Results</h6>
-                  <p className="sd-ae-body-paragraph-text text-secondary mb-3">{article.results}</p>
-                  <h6 className="sd-ae-body-sub-title mb-2">Conclusions</h6>
-                  <p className="sd-ae-body-paragraph-text text-secondary mb-1">{article.conclusions}</p>
+                  <div className="sd-ae-abstract-section">
+                    {article.abstractSections.map((section) => (
+                      <div key={section.heading}>
+                        <h6 className="sd-ae-body-sub-title mb-2">{section.heading}</h6>
+                        <p className="sd-ae-body-paragraph-text text-secondary mb-3">{section.text}</p>
+                      </div>
+                    ))}
+                  </div>
+
                 </div>
               )
             },
@@ -62,7 +61,10 @@ export default function ArticleCard({ article, activeTab, onTabChange }) {
               children: (
                 <div className="sd-ae-graphical-inner-preview pt-2">
                   <div className="d-flex align-items-center gap-2 mb-3 text-khaki-gold font-weight-bold small">
-                    <FileImageOutlined /> GRAPHICAL ABSTRACT
+                    <div className="sd-ae-abstract-icon-frame d-flex align-items-center justify-content-center me-2">
+                      <img src="/assets/img/file-icon.png" alt="" />
+                    </div>
+                    <p>Graphical Abstract</p>
                   </div>
                   <div className="sd-ae-graphical-abstract-frame">
                     <img src={article.graphicalAbstract} alt={`Graphical abstract for ${article.title}`} className="img-fluid" />

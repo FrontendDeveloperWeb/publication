@@ -2656,3 +2656,26 @@ p {
   /* Teal Dark theme on next arrow */
   color: #ffffff !important;
 }
+
+
+.sd-ae-articles-dashboard-content {
+  position: relative;
+
+}
+
+.sd-ae-articles-dashboard-content::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -15px;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 2px;
+  background-color: #3C4D4B;
+}
+
+.sd-ae-abstract-section {
+  max-height: 500px;
+  overflow-y: auto;
+}

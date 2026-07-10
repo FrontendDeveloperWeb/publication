@@ -26,7 +26,7 @@ export default function ArticlesDashboardSection({
   return (
     <section>
       <div className="sd-ae-dashboard-wrapper py-4">
-        <div className="container" style={{ maxWidth: '1280px' }}>
+        <div className="container">
 
           <DashboardTopBar />
 
@@ -43,7 +43,6 @@ export default function ArticlesDashboardSection({
             {/* ================= RIGHT CONTENT AREA ================= */}
             <div className="col-12 col-md-8 col-lg-9">
               <UpdatesAlertBanner />
-
               <div className="d-flex justify-content-end mb-4 gap-2">
                 <Button
                   className="sd-ae-btn-volume-switch btn-sm"
@@ -60,31 +59,34 @@ export default function ArticlesDashboardSection({
                   Next vol/issue <RightOutlined />
                 </Button>
               </div>
+              <div className="sd-ae-articles-dashboard-content">
 
-              <EditorialBoardRow title={editorialBoard.title} pageLabel={editorialBoard.pageLabel} />
 
-              <h3 className="sd-ae-section-category-title mb-4 pb-2">{sectionTitle}</h3>
+                <EditorialBoardRow title={editorialBoard.title} pageLabel={editorialBoard.pageLabel} />
 
-              {/* ================= ARRAYS RENDER LOOP WINDOW ================= */}
-              {articlesForPage.map((article) => (
-                <ArticleCard
-                  key={article.id}
-                  article={article}
-                  activeTab={activeTab}
-                  onTabChange={onTabChange}
-                />
-              ))}
+                <h3 className="sd-ae-section-category-title mb-4 pb-2">{sectionTitle}</h3>
 
-              {/* ================= MATCHED STYLED ANTD PAGINATION CONTROLLER ================= */}
-              <div className="sd-ae-global-footer-pagination d-flex justify-content-center align-items-center mt-5">
-                <Pagination
-                  current={currentPage}
-                  onChange={onPageChange}
-                  total={articles.length}
-                  pageSize={pageSize}
-                  showSizeChanger={false}
-                  className="sd-ae-custom-antd-pagination"
-                />
+                {/* ================= ARRAYS RENDER LOOP WINDOW ================= */}
+                {articlesForPage.map((article) => (
+                  <ArticleCard
+                    key={article.id}
+                    article={article}
+                    activeTab={activeTab}
+                    onTabChange={onTabChange}
+                  />
+                ))}
+
+                {/* ================= MATCHED STYLED ANTD PAGINATION CONTROLLER ================= */}
+                <div className="sd-ae-global-footer-pagination d-flex justify-content-center align-items-center mt-5">
+                  <Pagination
+                    current={currentPage}
+                    onChange={onPageChange}
+                    total={articles.length}
+                    pageSize={pageSize}
+                    showSizeChanger={false}
+                    className="sd-ae-custom-antd-pagination"
+                  />
+                </div>
               </div>
 
             </div>

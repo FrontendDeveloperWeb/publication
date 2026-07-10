@@ -17,11 +17,13 @@ const ALL_ARTICLES = [
     title: "Alginate oligosaccharides prevent and treat obesity by promoting brown fat thermogenesis rather than regulating gut microbiota",
     authors: "Yuncong Xu, Jun Jiang, Tao Li, Qiaojuan Yan ... Shaoqing Yang",
     pages: "Pages 1–21",
-    introduction: "Spinal cord injury (SCI) stands as the primary cause of disability, still lacking a clear pathogenesis and effective treatment. The role of macrophages is particularly unclear in SCI, especially regarding cellular senescence. Additionally, the mechanisms driving macrophage senescence after SCI, the release of senescence-associated secretory phenotype (SASP) factors that affect the regenerative niche, and their contributions to SCI progression remain elusive.",
-    objectives: "To investigate the role and underlying mechanism of Ubiquitously transcribed Tetratricopeptide repeat, X chromosome (UTX) in regulating macrophage senescence following SCI.",
-    methods: "A contusive SCI model was constructed to explore the presence of senescent macrophages. After screening for UTX by a PCR array, conditioned knockout UTX mice (LysM-Cre; UTXflox/flox) was constructed to explore the effect of UTX on macrophage senescence to influence angiogenesis and neurological function. Furthermore, RNA-seq and ChIP-seq were carried out to screen the downstream target gene Matrix Metalloprotease-3 (MMP-3). At last, RNA-seq was performed to explore the effect of MMP-3 on endothelial cells in vitro.",
-    results: "An elevated presence of lysine demethylase 6A (KDM6A/UTX), a special epigenetic regulatory modifier, was observed in macrophage senescence after SCI. Conditional deletion of UTX not only prevented macrophage senescence, but also enhanced the formation of a regenerative niche that protected endothelial cells from senescence and improved their proliferation. Mechanistically, UTX epigenetically regulated MMP-3 transcription through demethylating histone H3 lysine di/trimethylation (H3K27me2/3) at its promoter region. This led to senescent macrophages releasing MMP-3, a key SASP factor that disrupts the local microenvironment and impairs spinal cord repair post-injury. Notably, MMP-3 could act as a pro-senescent agent by senescent macrophages to propagate cellular senescence in endothelial cells (ECs), exacerbating cellular senescence in the injured region.",
-    conclusions: "Our findings elucidate the KDM6A/MMP-3 epigenetic regulatory axis, which governs macrophage senescence and creates an inhibitory microenvironment for regeneration after SCI. Targeting this pathway promotes angiogenesis and facilitates neural repair, highlighting its potential as a therapeutic target for improving functional recovery after SCI.",
+    abstractSections: [
+      { heading: "Introduction", text: "Spinal cord injury (SCI) stands as the primary cause of disability, still lacking a clear pathogenesis and effective treatment. The role of macrophages is particularly unclear in SCI, especially regarding cellular senescence. Additionally, the mechanisms driving macrophage senescence after SCI, the release of senescence-associated secretory phenotype (SASP) factors that affect the regenerative niche, and their contributions to SCI progression remain elusive." },
+      { heading: "Objectives", text: "To investigate the role and underlying mechanism of Ubiquitously transcribed Tetratricopeptide repeat, X chromosome (UTX) in regulating macrophage senescence following SCI." },
+      { heading: "Methods", text: "A contusive SCI model was constructed to explore the presence of senescent macrophages. After screening for UTX by a PCR array, conditioned knockout UTX mice (LysM-Cre; UTXflox/flox) was constructed to explore the effect of UTX on macrophage senescence to influence angiogenesis and neurological function. Furthermore, RNA-seq and ChIP-seq were carried out to screen the downstream target gene Matrix Metalloprotease-3 (MMP-3). At last, RNA-seq was performed to explore the effect of MMP-3 on endothelial cells in vitro." },
+      { heading: "Results", text: "An elevated presence of lysine demethylase 6A (KDM6A/UTX), a special epigenetic regulatory modifier, was observed in macrophage senescence after SCI. Conditional deletion of UTX not only prevented macrophage senescence, but also enhanced the formation of a regenerative niche that protected endothelial cells from senescence and improved their proliferation. Mechanistically, UTX epigenetically regulated MMP-3 transcription through demethylating histone H3 lysine di/trimethylation (H3K27me2/3) at its promoter region. This led to senescent macrophages releasing MMP-3, a key SASP factor that disrupts the local microenvironment and impairs spinal cord repair post-injury. Notably, MMP-3 could act as a pro-senescent agent by senescent macrophages to propagate cellular senescence in endothelial cells (ECs), exacerbating cellular senescence in the injured region." },
+      { heading: "Conclusions", text: "Our findings elucidate the KDM6A/MMP-3 epigenetic regulatory axis, which governs macrophage senescence and creates an inhibitory microenvironment for regeneration after SCI. Targeting this pathway promotes angiogenesis and facilitates neural repair, highlighting its potential as a therapeutic target for improving functional recovery after SCI." },
+    ],
     graphicalAbstract: "/assets/img/book-gernal.png"
   },
   {
@@ -29,11 +31,13 @@ const ALL_ARTICLES = [
     title: "Structural bio-engineering structures in modern subtropical agricultural soils: A 2026 framework analysis",
     authors: "Dr. Amara Sterling, Liam Vance, Zhao Taylor",
     pages: "Pages 22–45",
-    introduction: "Subtropical soil structures require precise structural bio-engineering to overcome modern erosion trends over dynamic weather cycles.",
-    objectives: "Isolate precise DNA cascades optimizing immediate root-binding frameworks without degrading natural microbial flora.",
-    methods: "Automated core profiling arrays deployed over 400 sample matrices across regional sectors within the agricultural belt.",
-    results: "Field trials across 12 subtropical zones showed a 34% reduction in topsoil displacement when the proposed root-binding lattice was applied, with no measurable disruption to native microbial diversity indices.",
-    conclusions: "The framework offers a scalable, ecologically neutral approach to soil stabilization and is recommended for pilot adoption in erosion-prone subtropical farmland.",
+    abstractSections: [
+      { heading: "Introduction", text: "Subtropical soil structures require precise structural bio-engineering to overcome modern erosion trends over dynamic weather cycles." },
+      { heading: "Objectives", text: "Isolate precise DNA cascades optimizing immediate root-binding frameworks without degrading natural microbial flora." },
+      { heading: "Methods", text: "Automated core profiling arrays deployed over 400 sample matrices across regional sectors within the agricultural belt." },
+      { heading: "Results", text: "Field trials across 12 subtropical zones showed a 34% reduction in topsoil displacement when the proposed root-binding lattice was applied, with no measurable disruption to native microbial diversity indices." },
+      { heading: "Conclusions", text: "The framework offers a scalable, ecologically neutral approach to soil stabilization and is recommended for pilot adoption in erosion-prone subtropical farmland." },
+    ],
     graphicalAbstract: "/assets/img/book-gernal.png"
   },
   {
@@ -41,11 +45,21 @@ const ALL_ARTICLES = [
     title: "Machine Learning models for real-time predictive degradation tracking in deep structural systems",
     authors: "Marcus Vance, Elena Rostova, Kenji Tanaka",
     pages: "Pages 46–78",
-    introduction: "Structural tracking models traditionally rely on retrospective physical assessments, delaying key infrastructure interventions.",
-    objectives: "Construct a neural framework capable of predicting load failures 72 hours before critical damage limits are breached.",
-    methods: "Deployment of distributed piezoelectric sensory layers across active test spans linked to a centralized processing matrix.",
-    results: "The trained model correctly flagged 91% of impending load failures within the 72-hour prediction window across all test spans, with a false-positive rate below 6%.",
-    conclusions: "Real-time piezoelectric sensing combined with predictive modeling can materially shorten the interval between damage onset and intervention, reducing unplanned structural downtime.",
+    abstractSections: [
+      { heading: "Introduction", text: "Structural tracking models traditionally rely on retrospective physical assessments, delaying key infrastructure interventions." },
+      { heading: "Objectives", text: "Construct a neural framework capable of predicting load failures 72 hours before critical damage limits are breached." },
+      { heading: "Methods", text: "Deployment of distributed piezoelectric sensory layers across active test spans linked to a centralized processing matrix." },
+      { heading: "Results", text: "The trained model correctly flagged 91% of impending load failures within the 72-hour prediction window across all test spans, with a false-positive rate below 6%." },
+      { heading: "Conclusions", text: "Real-time piezoelectric sensing combined with predictive modeling can materially shorten the interval between damage onset and intervention, reducing unplanned structural downtime." },
+      { heading: "Objectives", text: "Construct a neural framework capable of predicting load failures 72 hours before critical damage limits are breached." },
+      { heading: "Methods", text: "Deployment of distributed piezoelectric sensory layers across active test spans linked to a centralized processing matrix." },
+      { heading: "Results", text: "The trained model correctly flagged 91% of impending load failures within the 72-hour prediction window across all test spans, with a false-positive rate below 6%." },
+      { heading: "Conclusions", text: "Real-time piezoelectric sensing combined with predictive modeling can materially shorten the interval between damage onset and intervention, reducing unplanned structural downtime." },
+      { heading: "Objectives", text: "Construct a neural framework capable of predicting load failures 72 hours before critical damage limits are breached." },
+      { heading: "Methods", text: "Deployment of distributed piezoelectric sensory layers across active test spans linked to a centralized processing matrix." },
+      { heading: "Results", text: "The trained model correctly flagged 91% of impending load failures within the 72-hour prediction window across all test spans, with a false-positive rate below 6%." },
+      { heading: "Conclusions", text: "Real-time piezoelectric sensing combined with predictive modeling can materially shorten the interval between damage onset and intervention, reducing unplanned structural downtime." },
+    ],
     graphicalAbstract: "/assets/img/book-gernal.png"
   },
   {
@@ -53,11 +67,13 @@ const ALL_ARTICLES = [
     title: "Comparative evaluation of multi-crop integration matrices under extreme semi-arid climate shifts",
     authors: "Sarah Jenkins, Ahmed Mansoor, Clara Dupont",
     pages: "Pages 79–102",
-    introduction: "Semi-arid agricultural regions are facing unprecedented temperature spikes, disrupting traditional crop cycles.",
-    objectives: "To evaluate the yield efficiency of co-planting leguminous variations with deep-root cereal categories.",
-    methods: "A three-year randomized block design study executed across experimental plots with automated drip irrigation modulation.",
-    results: "Co-planted plots yielded 18% higher combined output than monoculture controls, with legume-cereal pairings showing the strongest resilience to temperature spikes above 40°C.",
-    conclusions: "Multi-crop integration under automated drip irrigation is a viable adaptation strategy for maintaining yield stability as semi-arid regions face increasingly extreme climate shifts.",
+    abstractSections: [
+      { heading: "Introduction", text: "Semi-arid agricultural regions are facing unprecedented temperature spikes, disrupting traditional crop cycles." },
+      { heading: "Objectives", text: "To evaluate the yield efficiency of co-planting leguminous variations with deep-root cereal categories." },
+      { heading: "Methods", text: "A three-year randomized block design study executed across experimental plots with automated drip irrigation modulation." },
+      { heading: "Results", text: "Co-planted plots yielded 18% higher combined output than monoculture controls, with legume-cereal pairings showing the strongest resilience to temperature spikes above 40°C." },
+      { heading: "Conclusions", text: "Multi-crop integration under automated drip irrigation is a viable adaptation strategy for maintaining yield stability as semi-arid regions face increasingly extreme climate shifts." },
+    ],
     graphicalAbstract: "/assets/img/book-gernal.png"
   }
 ];
