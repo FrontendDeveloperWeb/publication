@@ -2512,9 +2512,7 @@ p {
 
 /* Graphical abstract framed image inside the article tab */
 .sd-ae-graphical-abstract-frame {
-  border: 1px solid #ebf1f0;
   border-radius: 6px;
-  background-color: #fafbfb;
   padding: 16px;
   text-align: center;
 }
@@ -2678,4 +2676,384 @@ p {
 .sd-ae-abstract-section {
   max-height: 500px;
   overflow-y: auto;
+}
+
+/* ============================================================
+   ALL ISSUES DASHBOARD — scoped styles (prefix: sd-ai-)
+   Palette is namespaced to the root so it never leaks globally.
+   ============================================================ */
+.sd-ai-allissues-root {
+  --sd-ai-charcoal: #3C4D4B;
+  --sd-ai-khaki: #c8a27c;
+  --sd-ai-tint: #ebdcc9;
+  --sd-ai-border: #e4e4e4;
+  --sd-ai-text-muted: #64748B;
+
+  padding: 40px 12px 64px;
+  font-family: inherit;
+  color: var(--sd-ai-charcoal);
+}
+
+/* ---------- Shared card shell ---------- */
+.sd-ai-card {
+  background: #fff;
+  border: 1px solid var(--sd-ai-border);
+  border-radius: 6px;
+}
+
+.sd-ai-card-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--sd-ai-charcoal);
+}
+
+
+/* ============================================================
+   LEFT SIDEBAR — WIDGET 1: charcoal status tracker box
+   ============================================================ */
+.sd-ai-volume-box {
+  background: var(--sd-ai-charcoal);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(52, 67, 66, 0.15);
+}
+
+.sd-ai-search-badge {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--sd-ai-khaki);
+  font-size: 16px;
+}
+
+.sd-ai-volume-heading {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.sd-ai-volume-range {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 13px;
+  margin-top: 2px;
+}
+
+.sd-ai-volume-box-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sd-ai-btn-download-all,
+.sd-ai-btn-download-all:hover,
+.sd-ai-btn-download-all:focus {
+  background: var(--sd-ai-khaki) !important;
+  border-color: var(--sd-ai-khaki) !important;
+  color: var(--sd-ai-charcoal) !important;
+  font-weight: 600 !important;
+  height: 42px;
+  border-radius: 6px;
+}
+
+/* ============================================================
+   LEFT SIDEBAR — WIDGET 2: jump-to-volume grid
+   ============================================================ */
+.sd-ai-volume-grid {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.sd-ai-volume-chip {
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #1E293B33;
+  border-radius: 6px;
+  background: #CFB28D33;
+  color: var(--sd-ai-charcoal);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  padding: 10px 17px;
+  height: 40px;
+  width: 70px;
+  font-family: 'Afacad-Medium' !important;
+}
+
+.sd-ai-volume-chip:hover {
+  border-color: var(--sd-ai-khaki);
+  color: var(--sd-ai-khaki);
+}
+
+.sd-ai-volume-chip.is-active {
+  background: var(--sd-ai-khaki);
+  border-color: var(--sd-ai-khaki);
+  color: #000;
+}
+
+/* ============================================================
+   LEFT SIDEBAR — WIDGET 3: issue alerts (bell + outline button)
+   ============================================================ */
+.sd-ai-alert-bell {
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--sd-ai-tint);
+  color: var(--sd-ai-khaki);
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.sd-ai-alert-desc {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--sd-ai-text-muted);
+}
+
+/* Outline alert button — khaki border + text on a clean white fill. */
+.sd-ai-btn-setup-alert,
+.sd-ai-btn-setup-alert:hover,
+.sd-ai-btn-setup-alert:focus {
+  background: #fff !important;
+  border: 1px solid var(--sd-ai-khaki) !important;
+  color: var(--sd-ai-khaki) !important;
+  font-weight: 600 !important;
+  height: 40px;
+  border-radius: 6px;
+}
+
+.sd-ai-btn-setup-alert:hover {
+  background: var(--sd-ai-khaki) !important;
+  color: #fff !important;
+}
+
+/* ============================================================
+   RIGHT FEED — top title banner bar
+   ============================================================ */
+.sd-ai-feed-topbar {
+  border-bottom: 1px solid var(--sd-ai-border);
+  padding-bottom: 16px;
+}
+
+.sd-ai-feed-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--sd-ai-charcoal);
+}
+
+.sd-ai-btn-find-volume,
+.sd-ai-btn-find-volume:hover,
+.sd-ai-btn-find-volume:focus {
+  background: #fff !important;
+  border: 1px solid var(--sd-ai-border) !important;
+  color: var(--sd-ai-charcoal) !important;
+  border-radius: 999px !important;
+  height: 40px;
+  padding: 0 18px !important;
+  font-weight: 500 !important;
+}
+
+.sd-ai-btn-find-volume:hover {
+  border-color: var(--sd-ai-khaki) !important;
+  color: var(--sd-ai-khaki) !important;
+}
+
+/* ============================================================
+   RIGHT FEED — archive accordions (antd Collapse overrides)
+   ============================================================ */
+.sd-ai-archive-accordion.ant-collapse {
+  background: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sd-ai-archive-accordion .ant-collapse-item {
+  background: #fff;
+  border: 1px solid var(--sd-ai-border) !important;
+  border-radius: 6px !important;
+  overflow: hidden;
+}
+
+.sd-ai-archive-accordion .ant-collapse-header {
+  align-items: center !important;
+  padding: 20px 24px !important;
+}
+
+.sd-ai-accordion-year {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--sd-ai-charcoal);
+}
+
+.sd-ai-accordion-range {
+  font-size: 13px;
+  color: var(--sd-ai-text-muted);
+}
+
+/* Circular chevron indicator */
+.sd-ai-accordion-chevron {
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--sd-ai-khaki);
+  color: var(--sd-ai-khaki) !important;
+  font-size: 11px;
+}
+
+.sd-ai-accordion-chevron .anticon,
+.sd-ai-accordion-chevron svg {
+  color: var(--sd-ai-khaki) !important;
+}
+
+.sd-ai-archive-accordion .ant-collapse-content {
+  border-top: 1px solid var(--sd-ai-border);
+}
+
+.sd-ai-archive-accordion .ant-collapse-content-box {
+  padding: 0 !important;
+}
+
+/* ---------- Individual issue rows ---------- */
+.sd-ai-issue-row {
+  padding: 18px 24px;
+  border-bottom: 1px solid var(--sd-ai-border);
+}
+
+.sd-ai-issue-stack .sd-ai-issue-row:last-child {
+  border-bottom: none;
+}
+
+/* Strict 4px slate charcoal vertical accent strip. */
+.sd-ai-issue-accent-bar {
+  width: 4px;
+  border-radius: 2px;
+  background: var(--sd-ai-charcoal);
+  flex-shrink: 0;
+}
+
+.sd-ai-issue-title {
+  font-family: 'Afacad-Medium' !important;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--sd-ai-charcoal);
+}
+
+.sd-ai-issue-subtext {
+  font-size: 13px;
+  color: var(--sd-ai-text-muted);
+}
+
+/* Light-tinted "Open Access" pill */
+.sd-ai-access-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #E3EEF8;
+  color: #3C4D4B;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 12px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.sd-ai-access-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #3C4D4B;
+}
+
+/* Right-aligned "Download PDF" anchor link */
+.sd-ai-download-link {
+  color: var(--sd-ai-charcoal);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.15s ease;
+}
+
+.sd-ai-download-link:hover {
+  color: var(--sd-ai-khaki);
+  text-decoration: underline;
+}
+
+.ant-collapse-body {
+  padding: 0 !important;
+}
+
+/* ============================================================
+   RIGHT FEED — end feed action row
+   ============================================================ */
+.sd-ai-btn-load-earlier,
+.sd-ai-btn-load-earlier:hover,
+.sd-ai-btn-load-earlier:focus {
+  background: var(--sd-ai-charcoal) !important;
+  border-color: var(--sd-ai-charcoal) !important;
+  color: #fff !important;
+  font-weight: 600 !important;
+  height: 56px;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.sd-ai-btn-load-earlier:hover {
+  opacity: 0.94;
+}
+
+/* ============================================================
+   RESPONSIVE ADJUSTMENTS
+   ============================================================ */
+@media (max-width: 767.98px) {
+  .sd-ai-sidebar-sticky {
+    position: static;
+  }
+
+  .sd-ai-issue-row {
+    padding: 16px;
+  }
+
+  .sd-ai-archive-accordion .ant-collapse-header {
+    padding: 16px !important;
+  }
+
+  .sd-ai-feed-title {
+    font-size: 20px;
+  }
+}
+
+.sd-card-issue-body {
+  padding: 24px 18px 10px 18px;
+}
+
+.sd-card-issue-footer {
+  padding: 20px 24px;
+  border-top: 0.5px solid #C5C5C5;
+}
+
+.sd-card-issue-footer button {
+  background-color: #CFB28D !important;
+  border-color: #CFB28D !important;
+  color: #ffffff !important;
+  padding: 24px 30px;
+  width: 70% !important;
+  margin: 0 auto;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  font-family: 'Afacad-Medium' !important;
 }
