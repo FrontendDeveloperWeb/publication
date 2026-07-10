@@ -4,7 +4,7 @@ import { lazy } from 'react';
 const Home = lazy(() => import('../pages/Home/index.jsx'));
 const Journal = lazy(() => import('../pages/Journal/index.jsx'));
 const LatestIssues = lazy(() => import('../pages/LatestIssues/index.jsx'));
-const AimsAndScope = lazy(() => import('../pages/About/Aims_and_scope/index.jsx'));
+const AimsAndScope = lazy(() => import('../pages/About/AimsAndScope/index.jsx'));
 
 
 export const routes = [

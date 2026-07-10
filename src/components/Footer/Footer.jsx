@@ -20,8 +20,6 @@ import {
   TwitterOutlined,
   EyeOutlined,
   InstagramOutlined,
-
-
   DatabaseOutlined
 } from '@ant-design/icons';
 
