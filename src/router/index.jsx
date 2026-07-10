@@ -5,6 +5,7 @@ const Home = lazy(() => import('../pages/Home/index.jsx'));
 const Journal = lazy(() => import('../pages/Journal/index.jsx'));
 const LatestIssues = lazy(() => import('../pages/LatestIssues/index.jsx'));
 const AimsAndScope = lazy(() => import('../pages/About/AimsAndScope/index.jsx'));
+const EditorialBoard = lazy(() => import('../pages/About/EditorialBoard/index.jsx'));
 
 
 export const routes = [
@@ -12,4 +13,5 @@ export const routes = [
   { path: '/journals-and-books', element: Journal },
   { path: '/latest-issues', element: LatestIssues },
   { path: '/about/aims-and-scope', element: AimsAndScope },
+  { path: '/about/editorial-board', element: EditorialBoard },
 ];
