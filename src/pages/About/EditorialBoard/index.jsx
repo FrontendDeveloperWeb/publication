@@ -1,6 +1,6 @@
 import React from "react";
 import StatsBar from "../../../components/StatsBar/StatsBar";
-import HeroSection from "../../LatestIssues/partials/HeroSection";
+import HeroSection from "../../../components/JournalDashboard/HeroSection";
 import EditorialBoardCard from "./partials/EditorialBoardCard";
 
 const EditorialBoard = () => {

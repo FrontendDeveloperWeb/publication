@@ -20,6 +20,7 @@ export default function ArticlesDashboardSection({
   onTabChange,
   showPreviews,
   onTogglePreviews,
+  showContentsIndex = true,
 }) {
   const totalPages = Math.ceil(articles.length / pageSize);
 
@@ -38,6 +39,7 @@ export default function ArticlesDashboardSection({
               pageRange={pageRange}
               showPreviews={showPreviews}
               onTogglePreviews={onTogglePreviews}
+              showContentsIndex={showContentsIndex}
             />
 
             {/* ================= RIGHT CONTENT AREA ================= */}
@@ -60,7 +62,6 @@ export default function ArticlesDashboardSection({
                 </Button>
               </div>
               <div className="sd-ae-articles-dashboard-content">
-
 
                 <EditorialBoardRow title={editorialBoard.title} pageLabel={editorialBoard.pageLabel} />
 

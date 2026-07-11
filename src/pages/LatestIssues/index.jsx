@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import StatsBar from '../../components/StatsBar/StatsBar.jsx';
-import HeroSection from './partials/HeroSection.jsx';
-import ArticlesDashboardSection from './partials/ArticlesDashboardSection.jsx';
+import HeroSection from '../../components/JournalDashboard/HeroSection.jsx';
+import ArticlesDashboardSection from '../../components/JournalDashboard/ArticlesDashboardSection.jsx';
 
 const PAGE_SIZE = 2; // Cards shown per page/tab
 

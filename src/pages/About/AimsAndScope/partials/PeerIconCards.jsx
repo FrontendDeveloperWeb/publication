@@ -1,6 +1,5 @@
 import React from "react";
 import PeerCard from "../../../../components/Card/PeerCard";
-import "../../../../../src/assets/styles/talha.css";
 
 const PeerIconCards = () => {
   return (

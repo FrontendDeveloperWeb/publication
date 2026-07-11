@@ -1,5 +1,5 @@
 import StatsBar from "../../../components/StatsBar/StatsBar";
-import HeroSection from "../../LatestIssues/partials/HeroSection";
+import HeroSection from "../../../components/JournalDashboard/HeroSection";
 import AcceptancePanel from "./partials/AcceptancePanel";
 import PeerIconCards from "./partials/PeerIconCards";
 import { PeerReview } from "./partials/PeerReview";

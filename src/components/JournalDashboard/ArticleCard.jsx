@@ -1,9 +1,9 @@
 import { Tabs, Button } from 'antd';
-import { EyeOutlined, FileImageOutlined } from '@ant-design/icons';
+import { EyeOutlined } from '@ant-design/icons';
 
 export default function ArticleCard({ article, activeTab, onTabChange }) {
   return (
-    <div className="sd-ae-main-article-card-box  mb-4">
+    <div className="sd-ae-main-article-card-box mb-4">
 
       {/* Card Header Layer */}
       <div className="d-flex justify-content-between align-items-center mb-2">
@@ -51,7 +51,6 @@ export default function ArticleCard({ article, activeTab, onTabChange }) {
                       </div>
                     ))}
                   </div>
-
                 </div>
               )
             },
@@ -66,9 +65,26 @@ export default function ArticleCard({ article, activeTab, onTabChange }) {
                     </div>
                     <p>Graphical Abstract</p>
                   </div>
-                  <div className="sd-ae-graphical-abstract-frame">
-                    <img src={article.graphicalAbstract} alt={`Graphical abstract for ${article.title}`} className="img-fluid" />
-                  </div>
+
+                  {article.graphicalAbstractDescription ? (
+                    // Richer two-column layout: image alongside a written summary
+                    <div className="row">
+                      <div className="col-12 col-md-6">
+                        <div className="sd-ae-graphical-abstract-frame">
+                          <img src={article.graphicalAbstract} alt={`Graphical abstract for ${article.title}`} className="img-fluid" />
+                        </div>
+                      </div>
+                      <div className="col-12 col-md-6">
+                        <p className="sd-ae-body-paragraph-text mb-3">
+                          {article.graphicalAbstractDescription} <span>Learn More</span>
+                        </p>
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="sd-ae-graphical-abstract-frame">
+                      <img src={article.graphicalAbstract} alt={`Graphical abstract for ${article.title}`} className="img-fluid" />
+                    </div>
+                  )}
                 </div>
               )
             }

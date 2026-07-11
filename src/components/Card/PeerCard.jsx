@@ -1,5 +1,4 @@
 import React from "react";
-import "../../../src/assets/styles/talha.css";
 
 const PeerCard = ({ props }) => {
   const { icon, no, description } = props;

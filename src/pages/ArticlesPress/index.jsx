@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import StatsBar from '../../components/StatsBar/StatsBar.jsx';
-import HeroSection from './partials/HeroSection.jsx';
-import ArticlesDashboardSection from './partials/ArticlesDashboardSection.jsx';
+import HeroSection from '../../components/JournalDashboard/HeroSection.jsx';
+import ArticlesDashboardSection from '../../components/JournalDashboard/ArticlesDashboardSection.jsx';
 
 const PAGE_SIZE = 2; // Cards shown per page/tab
 
@@ -24,7 +24,8 @@ const ALL_ARTICLES = [
             { heading: "Results", text: "An elevated presence of lysine demethylase 6A (KDM6A/UTX), a special epigenetic regulatory modifier, was observed in macrophage senescence after SCI. Conditional deletion of UTX not only prevented macrophage senescence, but also enhanced the formation of a regenerative niche that protected endothelial cells from senescence and improved their proliferation. Mechanistically, UTX epigenetically regulated MMP-3 transcription through demethylating histone H3 lysine di/trimethylation (H3K27me2/3) at its promoter region. This led to senescent macrophages releasing MMP-3, a key SASP factor that disrupts the local microenvironment and impairs spinal cord repair post-injury. Notably, MMP-3 could act as a pro-senescent agent by senescent macrophages to propagate cellular senescence in endothelial cells (ECs), exacerbating cellular senescence in the injured region." },
             { heading: "Conclusions", text: "Our findings elucidate the KDM6A/MMP-3 epigenetic regulatory axis, which governs macrophage senescence and creates an inhibitory microenvironment for regeneration after SCI. Targeting this pathway promotes angiogenesis and facilitates neural repair, highlighting its potential as a therapeutic target for improving functional recovery after SCI." },
         ],
-        graphicalAbstract: "/assets/img/book-gernal.png"
+        graphicalAbstract: "/assets/img/book-gernal.png",
+        graphicalAbstractDescription: "Graphical abstract illustrating the structural bio-engineering framework for subtropical agricultural soils.The post-infarction microenvironment, dominated by oxidative stress and inflammation, remains a major barrier to effective cardiac regeneration. While injectable hydrogels have advanced myocardial infarction (MI) therapy, few systems simultaneously address oxidative stress, hypoxia, and dysregulated inflammation without triggering paradoxical oxidative damage from excessive ROS scavenging. Herein, we developed an injectable chitosan oligosaccharide-hyaluronic acid hydrogel (C-COS-OHA) incorporating a mild Fe3+/AMP nano-enzyme to Learn More....."
     },
     {
         id: 2,
@@ -38,7 +39,8 @@ const ALL_ARTICLES = [
             { heading: "Results", text: "Field trials across 12 subtropical zones showed a 34% reduction in topsoil displacement when the proposed root-binding lattice was applied, with no measurable disruption to native microbial diversity indices." },
             { heading: "Conclusions", text: "The framework offers a scalable, ecologically neutral approach to soil stabilization and is recommended for pilot adoption in erosion-prone subtropical farmland." },
         ],
-        graphicalAbstract: "/assets/img/book-gernal.png"
+        graphicalAbstract: "/assets/img/book-gernal.png",
+        graphicalAbstractDescription: "Graphical abstract illustrating the structural bio-engineering framework for subtropical agricultural soils.The post-infarction microenvironment, dominated by oxidative stress and inflammation, remains a major barrier to effective cardiac regeneration. While injectable hydrogels have advanced myocardial infarction (MI) therapy, few systems simultaneously address oxidative stress, hypoxia, and dysregulated inflammation without triggering paradoxical oxidative damage from excessive ROS scavenging. Herein, we developed an injectable chitosan oligosaccharide-hyaluronic acid hydrogel (C-COS-OHA) incorporating a mild Fe3+/AMP nano-enzyme to Learn More....."
     },
     {
         id: 3,
@@ -60,7 +62,8 @@ const ALL_ARTICLES = [
             { heading: "Results", text: "The trained model correctly flagged 91% of impending load failures within the 72-hour prediction window across all test spans, with a false-positive rate below 6%." },
             { heading: "Conclusions", text: "Real-time piezoelectric sensing combined with predictive modeling can materially shorten the interval between damage onset and intervention, reducing unplanned structural downtime." },
         ],
-        graphicalAbstract: "/assets/img/book-gernal.png"
+        graphicalAbstract: "/assets/img/book-gernal.png",
+        graphicalAbstractDescription: "Graphical abstract illustrating the structural bio-engineering framework for subtropical agricultural soils.The post-infarction microenvironment, dominated by oxidative stress and inflammation, remains a major barrier to effective cardiac regeneration. While injectable hydrogels have advanced myocardial infarction (MI) therapy, few systems simultaneously address oxidative stress, hypoxia, and dysregulated inflammation without triggering paradoxical oxidative damage from excessive ROS scavenging. Herein, we developed an injectable chitosan oligosaccharide-hyaluronic acid hydrogel (C-COS-OHA) incorporating a mild Fe3+/AMP nano-enzyme to Learn More....."
     },
     {
         id: 4,
@@ -74,7 +77,8 @@ const ALL_ARTICLES = [
             { heading: "Results", text: "Co-planted plots yielded 18% higher combined output than monoculture controls, with legume-cereal pairings showing the strongest resilience to temperature spikes above 40°C." },
             { heading: "Conclusions", text: "Multi-crop integration under automated drip irrigation is a viable adaptation strategy for maintaining yield stability as semi-arid regions face increasingly extreme climate shifts." },
         ],
-        graphicalAbstract: "/assets/img/book-gernal.png"
+        graphicalAbstract: "/assets/img/book-gernal.png",
+        graphicalAbstractDescription: "Graphical abstract illustrating the multi-crop integration approach for semi-arid agricultural systems."
     }
 ];
 
@@ -111,6 +115,7 @@ export default function ArticlesPress() {
                 onTabChange={setActiveTab}
                 showPreviews={showPreviews}
                 onTogglePreviews={setShowPreviews}
+                showContentsIndex={false}
             />
         </>
     );

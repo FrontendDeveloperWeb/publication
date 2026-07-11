@@ -8,8 +8,8 @@ import {
   BellOutlined,
 } from '@ant-design/icons';
 import StatsBar from '../../components/StatsBar/StatsBar';
-import HeroSection from '../LatestIssues/partials/HeroSection';
-import DashboardTopBar from '../LatestIssues/partials/DashboardTopBar';
+import HeroSection from '../../components/JournalDashboard/HeroSection';
+import DashboardTopBar from '../../components/JournalDashboard/DashboardTopBar';
 
 
 /* ============================================================
