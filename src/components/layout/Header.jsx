@@ -25,9 +25,11 @@ export default function Header() {
       <div className="header">
         <div className="container">
           <div className="d-flex align-items-center justify-content-between">
-            <div>
-              <img src="/public/assets/img/logo.png" alt="" />
-            </div>
+            <Link to="/">
+              <div className='web-logo'>
+                <img src="/public/assets/img/logo.png" alt="" />
+              </div>
+            </Link>
             <div>
               <ul className='list-area d-flex align-items-center justify-content-between'>
                 <li><Link to="/journals-and-books">Journal & Books</Link></li>

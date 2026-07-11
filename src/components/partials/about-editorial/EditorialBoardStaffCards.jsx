@@ -1,5 +1,5 @@
 import React from "react";
-import EditorialBoardStaffCard from "../../../../components/Card/EditorialBoardStaffCard";
+import EditorialBoardStaffCard from "./EditorialBoardStaffCard";
 
 const EditorialBoardStaffCards = () => {
   return (

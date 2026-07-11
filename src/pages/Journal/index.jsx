@@ -1,9 +1,9 @@
 import { useMemo, useState } from 'react';
-import StatsBar from '../../components/StatsBar/StatsBar.jsx';
-import HeroSection from './partials/HeroSection.jsx';
-import FiltersSidebar from './partials/FiltersSidebar.jsx';
-import PublicationsList from './partials/PublicationsList.jsx';
-import DashboardTopBar from '../../components/JournalDashboard/DashboardTopBar.jsx';
+import StatsBar from '../../components/layout/StatsBar.jsx';
+import HeroSection from '../../components/partials/journal/HeroSection.jsx';
+import FiltersSidebar from '../../components/partials/journal/FiltersSidebar.jsx';
+import PublicationsList from '../../components/partials/journal/PublicationsList.jsx';
+import DashboardTopBar from '../../components/layout/DashboardTopBar.jsx';
 
 const ITEMS_PER_PAGE = 7;
 

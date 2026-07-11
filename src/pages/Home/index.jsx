@@ -1,7 +1,7 @@
-import HeroSection from './partials/HeroSection.jsx';
-import ExploreResearchSection from './partials/ExploreResearchSection.jsx';
-import ArticlesCarouselSection from './partials/ArticlesCarouselSection.jsx';
-import OpenAccessSection from './partials/OpenAccessSection.jsx';
+import HeroSection from '../../components/partials/home/HeroSection.jsx';
+import ExploreResearchSection from '../../components/partials/home/ExploreResearchSection.jsx';
+import ArticlesCarouselSection from '../../components/partials/home/ArticlesCarouselSection.jsx';
+import OpenAccessSection from '../../components/partials/home/OpenAccessSection.jsx';
 
 const CATEGORIES = [
   { name: 'Chemical Engineering' },

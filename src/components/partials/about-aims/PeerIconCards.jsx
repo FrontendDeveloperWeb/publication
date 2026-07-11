@@ -1,5 +1,5 @@
 import React from "react";
-import PeerCard from "../../../../components/Card/PeerCard";
+import PeerCard from "./PeerCard";
 
 const PeerIconCards = () => {
   return (

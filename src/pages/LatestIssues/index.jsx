@@ -1,7 +1,5 @@
-import { useState } from 'react';
-import StatsBar from '../../components/StatsBar/StatsBar.jsx';
-import HeroSection from '../../components/JournalDashboard/HeroSection.jsx';
-import ArticlesDashboardSection from '../../components/JournalDashboard/ArticlesDashboardSection.jsx';
+import ArticlesDashboardSection from '../../components/partials/articles-dashboard/ArticlesDashboardSection.jsx';
+import { useArticlesDashboard } from '../../hooks/useArticlesDashboard.js';
 
 const PAGE_SIZE = 2; // Cards shown per page/tab
 
@@ -81,23 +79,15 @@ const ALL_ARTICLES = [
 export default function LatestIssues() {
   // Shared tab state — switching Abstract/Graphical abstract updates every card at once
   // (matches the reference screenshots, where both cards flip together)
-  const [activeTab, setActiveTab] = useState('abstract');
-  const [currentPage, setCurrentPage] = useState(1);
-  const [showPreviews, setShowPreviews] = useState(false);
-
-  const indexOfLastItem = currentPage * PAGE_SIZE;
-  const indexOfFirstItem = indexOfLastItem - PAGE_SIZE;
-  const articlesForPage = ALL_ARTICLES.slice(indexOfFirstItem, indexOfLastItem);
+  const {
+    activeTab, setActiveTab,
+    currentPage, setCurrentPage,
+    showPreviews, setShowPreviews,
+    articlesForPage,
+  } = useArticlesDashboard(ALL_ARTICLES, PAGE_SIZE);
 
   return (
-    <>
-      <HeroSection />
-
-      <section className="stat-sec">
-        <StatsBar />
-      </section>
-
-      <ArticlesDashboardSection
+    <ArticlesDashboardSection
         volume="Volume 85"
         pageRange="Pages 1–1222 (July 2026)"
         sectionTitle="Agricultural Sciences"
@@ -111,7 +101,6 @@ export default function LatestIssues() {
         onTabChange={setActiveTab}
         showPreviews={showPreviews}
         onTogglePreviews={setShowPreviews}
-      />
-    </>
+    />
   );
 }

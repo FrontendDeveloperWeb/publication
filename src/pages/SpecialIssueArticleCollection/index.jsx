@@ -1,10 +1,8 @@
 import { useMemo, useState } from 'react';
 import { FileTextOutlined } from '@ant-design/icons';
-import DashboardTopBar from '../../components/JournalDashboard/DashboardTopBar.jsx';
-import CollectionsSidebar from './partials/CollectionsSidebar.jsx';
-import CollectionsList from './partials/CollectionsList.jsx';
-import StatsBar from '../../components/StatsBar/StatsBar.jsx';
-import HeroSection from '../../components/JournalDashboard/HeroSection.jsx';
+import DashboardTopBar from '../../components/layout/DashboardTopBar.jsx';
+import CollectionsSidebar from '../../components/partials/special-issues/CollectionsSidebar.jsx';
+import CollectionsList from '../../components/partials/special-issues/CollectionsList.jsx';
 
 const FILTER_TYPES = [
   { id: 'all', label: 'All collections' },
@@ -51,13 +49,6 @@ export default function SpecialIssueArticleCollection() {
 
   return (
     <>
-      <HeroSection />
-
-      <section className="stat-sec">
-        <StatsBar />
-      </section>
-
-
       <section>
         <div className="container py-4">
 

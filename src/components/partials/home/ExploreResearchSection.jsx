@@ -1,6 +1,6 @@
 import { Tabs, Carousel, Button } from 'antd';
 import { ExperimentOutlined, ArrowRightOutlined, ClockCircleOutlined } from '@ant-design/icons';
-import StatsBar from '../../../components/StatsBar/StatsBar.jsx';
+import StatsBar from '../../layout/StatsBar.jsx';
 import PopularArticleCard from './PopularArticleCard.jsx';
 import RecentPublicationCard from './RecentPublicationCard.jsx';
 

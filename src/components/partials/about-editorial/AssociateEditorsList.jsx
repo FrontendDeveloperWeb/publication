@@ -1,5 +1,5 @@
 import React from "react";
-import AssociateEditorCard from "../../../../components/Card/AssociateEditorCard";
+import AssociateEditorCard from "./AssociateEditorCard";
 // import "./AssociateEditors.css"; 
 
 const AssociateEditorsList = () => {

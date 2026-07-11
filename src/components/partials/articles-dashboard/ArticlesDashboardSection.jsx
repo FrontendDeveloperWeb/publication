@@ -1,6 +1,6 @@
 import { Button, Pagination } from 'antd';
 import { LeftOutlined, RightOutlined } from '@ant-design/icons';
-import DashboardTopBar from './DashboardTopBar.jsx';
+import DashboardTopBar from '../../layout/DashboardTopBar.jsx';
 import VolumeSidebar from './VolumeSidebar.jsx';
 import UpdatesAlertBanner from './UpdatesAlertBanner.jsx';
 import EditorialBoardRow from './EditorialBoardRow.jsx';
