@@ -3,6 +3,7 @@ import StatsBar from '../../components/StatsBar/StatsBar.jsx';
 import HeroSection from './partials/HeroSection.jsx';
 import FiltersSidebar from './partials/FiltersSidebar.jsx';
 import PublicationsList from './partials/PublicationsList.jsx';
+import DashboardTopBar from '../../components/JournalDashboard/DashboardTopBar.jsx';
 
 const ITEMS_PER_PAGE = 7;
 
@@ -65,7 +66,11 @@ export default function Journal() {
       <section className="stat-sec">
         <StatsBar />
       </section>
-
+      <section>
+        <div className="container">
+          <DashboardTopBar />
+        </div>
+      </section>
       <section>
         <div className="sd-jl-container py-5">
           <div className="container">

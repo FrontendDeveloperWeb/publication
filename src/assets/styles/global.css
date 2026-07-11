@@ -384,14 +384,14 @@ p {
   background-color: #3C4D4B;
   /* Dark Teal exact match */
   color: #ffffff;
-  padding: 45px 20px;
+  padding: 40px 20px;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   background-image: url("../../../public/assets/img/banner-bottom-bg.png");
-  background-position: center;
+  background-position: right center;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -400,7 +400,6 @@ p {
   display: flex;
   justify-content: space-around;
   width: 100%;
-  max-width: 1200px;
   z-index: 2;
 }
 
@@ -420,6 +419,13 @@ p {
 .sd-stat-item p {
   font-size: 16px;
   color: #C5C5C5;
+  margin: 0;
+}
+
+.sd-stat-item .sd-title {
+  font-family: 'Afacad-SemiBold' !important;
+  font-size: 40px;
+  color: #FFFFFF;
   margin: 0;
 }
 
@@ -1611,7 +1617,7 @@ p {
 }
 
 .stat-sec {
-  margin: 100px 0;
+  margin: 100px 0 40px 0;
 }
 
 /* ==========================================
@@ -3554,9 +3560,10 @@ p {
 
 /* About this publication banner */
 .sd-sic-about-publication {
+  margin-top: 40px !important;
   background-color: #CFB28D;
   border: 1px solid rgba(207, 178, 141, 0.3);
-  border-radius: 8px;
+  border-radius: 20px;
   padding: 24px;
 }
 
@@ -3580,8 +3587,26 @@ p {
 .sd-sic-collection-card {
   border: 1px solid #E2E8F0;
   margin-bottom: 20px;
-  padding: 20px;
+  padding: 20px 20px 20px 25px;
   border-radius: 8px;
+  position: relative;
+}
+
+.sd-sic-collection-card::after {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: 10px;
+  width: 3px;
+  height: 80%;
+  background-color: #3C4D4B;
+  border-radius: 999px;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.sd-sic-about-icon {
+  flex: 0 0 60px;
 }
 
 /* .sd-sic-arrow-link:hover {
@@ -3599,4 +3624,154 @@ p {
 
 .sd-sic-arrow-link:hover .arrow-active {
   display: block;
+}
+
+/* ==========================================================================
+   SCIENCEDIRECT NAV ENGINE EXACT PIXEL SPECIFICATIONS
+   ========================================================================== */
+
+.sd-topbar-wrapper {
+  border-bottom: 1px solid #f1ebd9;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+}
+
+/* Nav Hover Anchors Layout */
+.sd-nav-item {
+  font-size: 18px;
+  font-family: "Afacad-Medium", sans-serif;
+  font-weight: 500;
+  color: #3C4D4B;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s ease;
+  user-select: none;
+}
+
+.sd-nav-item:hover {
+  color: #344342;
+  /* Soft deep charcoal state hover interaction */
+}
+
+.sd-chevron-icon {
+  font-size: 11px;
+  color: #333333;
+  font-weight: bold;
+}
+
+/* Dropdown Menu Item Global Overrides */
+.sd-drop-link {
+  font-size: 14px;
+  color: #444444 !important;
+  text-decoration: none;
+  display: block;
+  padding: 2px 8px;
+}
+
+.sd-drop-link:hover {
+  color: #344342 !important;
+}
+
+/* ==========================================================================
+   RIGHT COMPOSITE COMPONENT PARTS: PILL SEARCH, BEIGE BTN
+   ========================================================================== */
+
+.max-width-800 {
+  max-width: 800px;
+}
+
+/* Rounded Pill Shape Search Block */
+.sd-search-composite-pill {
+  border: 0.5px solid #3C4D4B66;
+  border-radius: 50px;
+  background-color: #F5F5F5;
+  overflow: hidden;
+  height: 50px;
+  width: 100%;
+  max-width: 350px;
+  transition: border-color 0.2s ease;
+}
+
+.sd-search-composite-pill:focus-within {
+  border-color: #344342;
+}
+
+.sd-search-pill-input {
+  background-color: transparent !important;
+  font-size: 13.5px;
+  color: #333333;
+  padding-left: 16px !important;
+  height: 100%;
+}
+
+.sd-search-pill-input::placeholder {
+  color: #555555;
+  opacity: 1;
+}
+
+/* Search Trigger Button Frame Right Attached */
+.sd-search-pill-btn {
+  background-color: #344342;
+  border: 0.5px solid #3C4D4B66;
+  /* Direct Slate Charcoal Tone match */
+  color: #ffffff;
+  border: none;
+  height: 100%;
+  font-size: 13.5px;
+  font-weight: 500;
+  border-radius: 0 50px 50px 0;
+  /* Pill dynamic right clip layout */
+  transition: background-color 0.2s ease;
+}
+
+.sd-search-composite-pill input::placeholder {
+  color: #3C4D4B !important;
+  /* Replace with your desired color */
+  opacity: 1;
+  /* Ensures consistent opacity across Firefox and Safari */
+}
+
+/* Fallback if .sd-search-composite-pill IS the input element itself */
+.sd-search-composite-pill::placeholder {
+  color: #3C4D4B !important;
+  opacity: 1;
+}
+
+.sd-search-pill-btn:hover {
+  background-color: #273231;
+}
+
+/* Exact Khaki Muted Gold Action Trigger */
+.sd-btn-submit-article {
+  background-color: #c8a27c !important;
+  /* Premium muted gold value texture */
+  border: none !important;
+  color: #222222 !important;
+  /* Soft dark contrast label tracking */
+  font-size: 13.5px !important;
+  font-weight: 500 !important;
+  border-radius: 4px !important;
+  height: 38px !important;
+  display: inline-flex;
+  align-items: center;
+  box-shadow: none !important;
+}
+
+.sd-btn-submit-article:hover {
+  background-color: #ba936b !important;
+  color: #000000 !important;
+}
+
+/* Underline link element for authors index */
+.sd-author-guide-link {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #344342;
+  transition: color 0.2s ease;
+}
+
+.sd-author-guide-link:hover {
+  color: #c8a27c;
 }

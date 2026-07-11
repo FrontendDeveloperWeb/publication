@@ -3,6 +3,8 @@ import { FileTextOutlined } from '@ant-design/icons';
 import DashboardTopBar from '../../components/JournalDashboard/DashboardTopBar.jsx';
 import CollectionsSidebar from './partials/CollectionsSidebar.jsx';
 import CollectionsList from './partials/CollectionsList.jsx';
+import StatsBar from '../../components/StatsBar/StatsBar.jsx';
+import HeroSection from '../../components/JournalDashboard/HeroSection.jsx';
 
 const FILTER_TYPES = [
   { id: 'all', label: 'All collections' },
@@ -48,39 +50,48 @@ export default function SpecialIssueArticleCollection() {
   }, [activeFilter]);
 
   return (
-    <section>
-      <div className="container py-4">
+    <>
+      <HeroSection />
 
-        <DashboardTopBar />
+      <section className="stat-sec">
+        <StatsBar />
+      </section>
 
-        <div className="row g-4">
-          <CollectionsSidebar
-            filterTypes={FILTER_TYPES}
-            activeFilter={activeFilter}
-            onFilterChange={setActiveFilter}
-          />
-          <CollectionsList collections={filteredCollections} />
-        </div>
 
-        <div className="sd-sic-about-publication d-flex align-items-start gap-3 mt-4">
-          <div className="sd-sic-about-icon">
-            <img src="/assets/img/about-doc.png" alt="Elsevier logo" className="img-fluid" />
+      <section>
+        <div className="container py-4">
+
+          <DashboardTopBar />
+
+          <div className="row g-4">
+            <CollectionsSidebar
+              filterTypes={FILTER_TYPES}
+              activeFilter={activeFilter}
+              onFilterChange={setActiveFilter}
+            />
+            <CollectionsList collections={filteredCollections} />
           </div>
-          <div>
-            <h5 className="mb-2">About this publication</h5>
-            <p className="m-0">
-              This journal is published on behalf of Cairo University by Elsevier B.V., a leading global academic
-              publisher committed to advancing scientific knowledge. All content published within this journal—including
-              research articles, reviews, figures, tables, supplementary materials, and editorial content—is protected
-              under international copyright laws. All rights reserved. No part of this publication may be reproduced,
-              distributed, stored in a retrieval system, transmitted, or adapted in any form or by any means without
-              prior written permission from the copyright holder, except where permitted by applicable licensing
-              agreements or statutory regulations.
-            </p>
-          </div>
-        </div>
 
-      </div>
-    </section>
+          <div className="sd-sic-about-publication d-flex align-items-start gap-3 mt-4">
+            <div className="sd-sic-about-icon">
+              <img src="/assets/img/about-doc.png" alt="Elsevier logo" className="img-fluid" />
+            </div>
+            <div>
+              <h5 className="mb-2">About this publication</h5>
+              <p className="m-0">
+                This journal is published on behalf of Cairo University by Elsevier B.V., a leading global academic
+                publisher committed to advancing scientific knowledge. All content published within this journal—including
+                research articles, reviews, figures, tables, supplementary materials, and editorial content—is protected
+                under international copyright laws. All rights reserved. No part of this publication may be reproduced,
+                distributed, stored in a retrieval system, transmitted, or adapted in any form or by any means without
+                prior written permission from the copyright holder, except where permitted by applicable licensing
+                agreements or statutory regulations.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </>
   );
 }

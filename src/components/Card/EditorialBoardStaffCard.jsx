@@ -7,7 +7,7 @@ const EditorialBoardStaffCard = ({ staffDetails }) => {
     <div className="staff-section">
       {/* Only render the heading if it exists */}
       {head && <h2 className="staff-role-heading">{head}</h2>}
-      
+
       <div className="staff-card">
         <div className="staff-img-box">
           <img src={img} alt={name} />
