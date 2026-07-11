@@ -259,3 +259,391 @@
     padding-top: 30px;
   }
 }
+
+
+/* ==================================
+================ EDITORIAL BOARD STYLING */
+
+/* Layout Container */
+.editorial-main-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.editorial-sidebar {
+  flex: 0 0 320px; /* Fixed width sidebar */
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.editorial-main-content {
+  flex: 1; /* Takes remaining space */
+  border-left: 2px solid #CDCFD0;
+  padding-left: 40px;
+}
+
+/* ------------------------------------- */
+/* Dark Sidebar Card */
+/* ------------------------------------- */
+.editorial-board-card-dark {
+  background-color: #404c4d; /* Dark slate */
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.editorial-board-card-dark h3 {
+  font-family: 'Philosopher-Bold', serif;
+  color: #c4a27d; /* Tan/Gold */
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.editorial-board-card-dark p {
+  font-family: 'Inter', sans-serif;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ------------------------------------- */
+/* Contents List Box */
+/* ------------------------------------- */
+.editorial-contents-box {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.contents-header {
+  padding: 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.contents-header h3 {
+  font-family: 'Philosopher-Bold', serif;
+  font-size: 18px;
+  color: #333333;
+  margin: 0;
+}
+
+.contents-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.contents-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.contents-no {
+  background-color: #f0eadd; /* Light beige circle */
+  color: #8c7356;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.contents-country {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #333333;
+  font-weight: 500;
+}
+
+.active-country {
+  color: #b58253; /* Brown/Tan color for Egypt */
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.contents-count {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: #888888;
+}
+
+.contents-footer {
+  padding: 16px 20px;
+}
+
+.contents-footer p {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #333333;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* ------------------------------------- */
+/* Staff Cards Content Area */
+/* ------------------------------------- */
+.staff-section {
+  margin-bottom: 16px;
+}
+
+.staff-role-heading {
+  font-family: 'Philosopher-Bold', serif;
+  font-size: 24px;
+  color: #404c4d;
+  margin-bottom: 16px;
+  margin-top: 32px;
+}
+
+.staff-section:first-child .staff-role-heading {
+  margin-top: 0;
+}
+
+.staff-card {
+  display: flex;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #ffffff;
+  overflow: hidden; /* Ensures image respects rounded corners */
+}
+
+.staff-img-box {
+  flex: 0 0 160px; /* Fixed width for the image */
+  background-color: #1c1f26; /* Dark background behind headshots */
+}
+
+.staff-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.staff-info-box {
+  padding: 24px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.staff-designation {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: #b58253; /* Tan */
+  font-weight: 600;
+  margin: 0 0 8px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.staff-name {
+  font-family: 'Philosopher-Bold', serif;
+  font-size: 22px;
+  color: #333333;
+  margin: 0 0 8px 0;
+}
+
+.staff-expertise {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: #777777;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .editorial-main-section {
+    flex-direction: column;
+  }
+  
+  .editorial-sidebar {
+    width: 100%;
+    flex: none;
+  }
+  
+  .staff-card {
+    flex-direction: column;
+  }
+  
+  .staff-img-box {
+    flex: none;
+    height: 200px;
+  }
+}
+
+
+/* ==================================
+================ AssociateEditors STYLING */
+
+/* Container */
+.associate-editors-container {
+  width: 100%;
+  max-width: 900px; /* Adjust based on your parent container width */
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* Headings */
+.main-heading {
+  font-family: 'Philosopher-Bold', serif;
+  font-size: 26px;
+  color: #333333; /* Dark slate gray */
+  margin-bottom: 24px;
+}
+
+.editor-category-group {
+  margin-bottom: 40px;
+}
+
+.category-heading {
+  font-family: 'Philosopher-Bold', serif;
+  font-size: 18px;
+  color: #b58253; /* Tan / Gold color */
+  margin-bottom: 20px;
+}
+
+/* 2-Column Grid */
+.editors-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 32px;
+  column-gap: 40px;
+}
+
+/* Individual Card Styling */
+.associate-card {
+  display: flex;
+  align-items: center; /* Aligns image and text vertically in the middle */
+  gap: 16px;
+}
+
+/* Circular Image Wrapper */
+.associate-img-wrapper {
+  width: 65px;
+  height: 65px;
+  flex-shrink: 0; /* Prevents the circle from squishing */
+  border-radius: 50%;
+  background-color: #e0e0e0; /* Placeholder color while image loads */
+  overflow: hidden;
+}
+
+.associate-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Text Formatting Inside the Card */
+.associate-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.associate-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #333333;
+  margin: 0 0 4px 0;
+}
+
+.associate-university {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  color: #d4a373; /* Light tan color */
+  margin: 0 0 4px 0;
+  line-height: 1.4;
+}
+
+.associate-expertise {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  color: #8a949e; /* Light bluish-gray */
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* ================================== */
+/* Pagination Styling */
+/* ================================== */
+.pagination-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 60px;
+  padding-bottom: 40px;
+}
+
+.page-btn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  color: #555555;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.page-btn:hover {
+  background-color: #f5f5f5;
+}
+
+/* Active Page (1) */
+.active-page {
+  background-color: #c4a27d; /* Tan background */
+  color: #ffffff;
+  border-color: #c4a27d;
+}
+
+.active-page:hover {
+  background-color: #b58253; /* Slightly darker on hover */
+}
+
+/* Left Nav Arrow (Dark) */
+.prev-btn {
+  background-color: #404c4d; /* Dark slate */
+  color: #ffffff;
+  border-color: #404c4d;
+}
+
+.prev-btn:hover {
+  background-color: #2b3a3a;
+}
+
+/* Pagination Dots */
+.page-dots {
+  color: #777777;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .editors-grid {
+    grid-template-columns: 1fr; /* Stacks to 1 column on mobile */
+  }
+}
