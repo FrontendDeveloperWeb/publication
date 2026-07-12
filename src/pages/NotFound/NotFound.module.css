@@ -17,7 +17,7 @@
 .title {
   font-family: 'Georgia', serif;
   font-size: 42px;
-  color: #2D1B69;
+  color: #cfb28d;
   margin-bottom: 15px;
 }
 
@@ -30,7 +30,8 @@
 .link {
   display: inline-block;
   padding: 14px 36px;
-  background: linear-gradient(135deg, #6B4EE6, #FF6B9D);
+  background-color: #3C4D4B;
+  border-color: #3C4D4B;
   color: white;
   text-decoration: none;
   border-radius: 50px;
