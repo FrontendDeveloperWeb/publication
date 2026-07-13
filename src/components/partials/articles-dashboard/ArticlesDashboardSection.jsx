@@ -16,8 +16,6 @@ export default function ArticlesDashboardSection({
   pageSize,
   currentPage,
   onPageChange,
-  activeTab,
-  onTabChange,
   showPreviews,
   onTogglePreviews,
   showContentsIndex = true,
@@ -69,12 +67,7 @@ export default function ArticlesDashboardSection({
 
                 {/* ================= ARRAYS RENDER LOOP WINDOW ================= */}
                 {articlesForPage.map((article) => (
-                  <ArticleCard
-                    key={article.id}
-                    article={article}
-                    activeTab={activeTab}
-                    onTabChange={onTabChange}
-                  />
+                  <ArticleCard key={article.id} article={article} />
                 ))}
 
                 {/* ================= MATCHED STYLED ANTD PAGINATION CONTROLLER ================= */}

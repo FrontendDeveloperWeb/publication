@@ -81,10 +81,7 @@ const ALL_ARTICLES = [
 ];
 
 export default function ArticlesPress() {
-    // Shared tab state — switching Abstract/Graphical abstract updates every card at once
-    // (matches the reference screenshots, where both cards flip together)
     const {
-        activeTab, setActiveTab,
         currentPage, setCurrentPage,
         showPreviews, setShowPreviews,
         articlesForPage,
@@ -92,20 +89,18 @@ export default function ArticlesPress() {
 
     return (
         <ArticlesDashboardSection
-                volume="Volume 85"
-                pageRange="Pages 1–1222 (July 2026)"
-                sectionTitle="Agricultural Sciences"
-                editorialBoard={EDITORIAL_BOARD}
-                articles={ALL_ARTICLES}
-                articlesForPage={articlesForPage}
-                pageSize={PAGE_SIZE}
-                currentPage={currentPage}
-                onPageChange={setCurrentPage}
-                activeTab={activeTab}
-                onTabChange={setActiveTab}
-                showPreviews={showPreviews}
-                onTogglePreviews={setShowPreviews}
-                showContentsIndex={false}
+            volume="Volume 85"
+            pageRange="Pages 1–1222 (July 2026)"
+            sectionTitle="Agricultural Sciences"
+            editorialBoard={EDITORIAL_BOARD}
+            articles={ALL_ARTICLES}
+            articlesForPage={articlesForPage}
+            pageSize={PAGE_SIZE}
+            currentPage={currentPage}
+            onPageChange={setCurrentPage}
+            showPreviews={showPreviews}
+            onTogglePreviews={setShowPreviews}
+            showContentsIndex={false}
         />
     );
 }

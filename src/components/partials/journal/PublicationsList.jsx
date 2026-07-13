@@ -1,6 +1,6 @@
 import { Select } from 'antd';
 import PublicationListItem from './PublicationListItem.jsx';
-import PaginationBar from './PaginationBar.jsx';
+import PaginationBar from '../../shared/PaginationBar/PaginationBar.jsx';
 
 const { Option } = Select;
 

@@ -27,17 +27,17 @@ export default function Header() {
           <div className="d-flex align-items-center justify-content-between">
             <Link to="/">
               <div className='web-logo'>
-                <img src="/public/assets/img/logo.png" alt="" />
+                <img src="/assets/img/logo.png" alt="" />
               </div>
             </Link>
             <div>
               <ul className='list-area d-flex align-items-center justify-content-between'>
                 <li><Link to="/journals-and-books">Journal & Books</Link></li>
                 <li><a href="#">
-                  <img src="/public/assets/img/nav-q.png" alt="" /></a></li>
+                  <img src="/assets/img/nav-q.png" alt="" /></a></li>
                 <li><a href="#">
 
-                  <img src="/public/assets/img/h-back-icon.png" alt="" />
+                  <img src="/assets/img/h-back-icon.png" alt="" />
                 </a></li>
                 <li>
                   <button className='custom-btn transparent-btn'>Register</button>

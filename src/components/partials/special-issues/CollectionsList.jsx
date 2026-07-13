@@ -1,5 +1,6 @@
 import { Input } from 'antd';
-import { SearchOutlined, CalendarOutlined, ArrowRightOutlined, LeftOutlined, RightOutlined } from '@ant-design/icons';
+import { SearchOutlined, CalendarOutlined, ArrowRightOutlined } from '@ant-design/icons';
+import { PaginationShell, PageButton, PaginationEllipsis } from '../../shared/PaginationBar/PaginationBar.jsx';
 
 export default function CollectionsList({ collections }) {
   return (
@@ -52,21 +53,15 @@ export default function CollectionsList({ collections }) {
         )}
       </div>
 
-      {/* Reuses the same square pagination pattern already established on the Journal page */}
-      <div className="sd-jl-pagination-bar-wrapper d-flex justify-content-center align-items-center mt-4">
-        <button className="sd-jl-pag-btn-step arrow-left" disabled>
-          <LeftOutlined />
-        </button>
-        <button className="sd-jl-pag-btn-num active-gold">1</button>
-        <button className="sd-jl-pag-btn-num">2</button>
-        <button className="sd-jl-pag-btn-num">3</button>
-        <span className="sd-jl-pag-ellipse">···</span>
-        <button className="sd-jl-pag-btn-num">42</button>
-        <button className="sd-jl-pag-btn-step arrow-right">
-          <RightOutlined />
-        </button>
-      </div>
+      {/* Decorative pagination — reuses the shared Journal pagination primitives */}
+      <PaginationShell className="mt-4" prevDisabled>
+        <PageButton active>1</PageButton>
+        <PageButton>2</PageButton>
+        <PageButton>3</PageButton>
+        <PaginationEllipsis />
+        <PageButton>42</PageButton>
+      </PaginationShell>
 
-    </div>
+    </div >
   );
 }

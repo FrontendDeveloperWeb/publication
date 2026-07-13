@@ -1,7 +1,46 @@
-import { Tabs, Button } from 'antd';
+import { Button } from 'antd';
 import { EyeOutlined } from '@ant-design/icons';
+import Tabs from '../../shared/Tabs/Tabs.jsx';
 
-export default function ArticleCard({ article, activeTab, onTabChange }) {
+// Gold "file" heading shown at the top of the Abstract pane.
+function PaneHeading({ children }) {
+  return (
+    <div className="d-flex align-items-center gap-2 mb-3 text-khaki-gold font-weight-bold small">
+      <div className="d-flex align-items-center gap-2">
+        <div className="sd-ae-abstract-icon-frame d-flex align-items-center justify-content-center me-2">
+          <img src="/assets/img/file-icon.png" alt="" />
+        </div>
+        <p>{children}</p>
+      </div>
+    </div>
+  );
+}
+
+function AbstractPane({ sections }) {
+  return (
+    <div className="sd-ae-abstract-inner-text-flow pt-2">
+      <PaneHeading>Abstract</PaneHeading>
+      <div className="sd-ae-abstract-section">
+        {sections.map((section, index) => (
+          <div key={`${section.heading}-${index}`}>
+            <h6 className="sd-ae-body-sub-title mb-2">{section.heading}</h6>
+            <p className="sd-ae-body-paragraph-text text-secondary mb-3">{section.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default function ArticleCard({ article }) {
+  // Each card owns its own tab state (via the isolated <Tabs>), so toggling
+  // one card's Abstract/Graphical view never affects sibling cards.
+  const tabItems = [
+    { key: 'abstract', label: 'Abstract', children: <AbstractPane sections={article.abstractSections} /> },
+    // Graphical abstract view is intentionally disabled pending final assets.
+    { key: 'graphical', label: 'Graphical abstract', children: null },
+  ];
+
   return (
     <div className="sd-ae-main-article-card-box mb-4">
 
@@ -23,73 +62,9 @@ export default function ArticleCard({ article, activeTab, onTabChange }) {
       <p className="sd-ae-article-authors-text mb-1 text-muted">{article.authors}</p>
       <p className="sd-ae-article-pages-range text-muted small mb-4">{article.pages}</p>
 
-      {/* ================= OFFICIAL ANTD TABS SCHEME INSIDE CARD ================= */}
+      {/* Isolated tab system — self-contained state per card */}
       <div className="sd-ae-interactive-tabs-container">
-        <Tabs
-          activeKey={activeTab}
-          onChange={onTabChange}
-          className="sd-ae-custom-antd-tabs"
-          items={[
-            {
-              key: 'abstract',
-              label: 'Abstract',
-              children: (
-                <div className="sd-ae-abstract-inner-text-flow pt-2">
-                  <div className="d-flex align-items-center gap-2 mb-3 text-khaki-gold font-weight-bold small">
-                    <div className="d-flex align-items-center gap-2">
-                      <div className="sd-ae-abstract-icon-frame d-flex align-items-center justify-content-center me-2">
-                        <img src="/assets/img/file-icon.png" alt="" />
-                      </div>
-                      <p>Abstract</p>
-                    </div>
-                  </div>
-                  <div className="sd-ae-abstract-section">
-                    {article.abstractSections.map((section) => (
-                      <div key={section.heading}>
-                        <h6 className="sd-ae-body-sub-title mb-2">{section.heading}</h6>
-                        <p className="sd-ae-body-paragraph-text text-secondary mb-3">{section.text}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )
-            },
-            {
-              key: 'graphical',
-              label: 'Graphical abstract',
-              children: (
-                <div className="sd-ae-graphical-inner-preview pt-2">
-                  <div className="d-flex align-items-center gap-2 mb-3 text-khaki-gold font-weight-bold small">
-                    <div className="sd-ae-abstract-icon-frame d-flex align-items-center justify-content-center me-2">
-                      <img src="/assets/img/file-icon.png" alt="" />
-                    </div>
-                    <p>Graphical Abstract</p>
-                  </div>
-
-                  {article.graphicalAbstractDescription ? (
-                    // Richer two-column layout: image alongside a written summary
-                    <div className="row">
-                      <div className="col-12 col-md-6">
-                        <div className="sd-ae-graphical-abstract-frame">
-                          <img src={article.graphicalAbstract} alt={`Graphical abstract for ${article.title}`} className="img-fluid" />
-                        </div>
-                      </div>
-                      <div className="col-12 col-md-6">
-                        <p className="sd-ae-body-paragraph-text mb-3">
-                          {article.graphicalAbstractDescription} <span>Learn More</span>
-                        </p>
-                      </div>
-                    </div>
-                  ) : (
-                    <div className="sd-ae-graphical-abstract-frame">
-                      <img src={article.graphicalAbstract} alt={`Graphical abstract for ${article.title}`} className="img-fluid" />
-                    </div>
-                  )}
-                </div>
-              )
-            }
-          ]}
-        />
+        <Tabs defaultActiveKey="abstract" className="sd-ae-custom-antd-tabs" items={tabItems} />
       </div>
 
     </div>
