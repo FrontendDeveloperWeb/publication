@@ -1,5 +1,6 @@
 import { lazy } from 'react';
 
+
 const Home = lazy(() => import('../pages/Home/index.jsx'));
 const Journal = lazy(() => import('../pages/Journal/index.jsx'));
 const LatestIssues = lazy(() => import('../pages/LatestIssues/index.jsx'));
@@ -8,6 +9,11 @@ const AllIssues = lazy(() => import('../pages/AllIssues/index.jsx'));
 const EditorialBoard = lazy(() => import('../pages/About/EditorialBoard/index.jsx'));
 const ArticlesPress = lazy(() => import('../pages/ArticlesPress/index.jsx'));
 const SpecialIssueArticleCollection = lazy(() => import('../pages/SpecialIssueArticleCollection/index.jsx'));
+const JournalInsights = lazy(() => import('../pages/About/JournalInsights/index.jsx'));
+const News = lazy(() => import('../pages/About/News/index.jsx'));
+const LanguageEditing = lazy(() => import('../pages/LanguageEditing/index.jsx'));
+const SubmitArticle = lazy(() => import('../pages/SubmitArticle/index.jsx'));
+const OpenAccessOption = lazy(() => import('../pages/OpenAccessOption/index.jsx'));
 
 /**
  * Route table. `meta` drives the shared page chrome that <Layout> renders
@@ -26,9 +32,15 @@ export const routes = [
   { path: '/all-issues', element: AllIssues, meta: { hero: 'standard', stats: true, topbar: true } },
   { path: '/articles-press', element: ArticlesPress, meta: { hero: 'standard', stats: true, topbar: false } },
   { path: '/special-issue-article-collection', element: SpecialIssueArticleCollection, meta: { hero: 'standard', stats: true, topbar: false } },
-  { path: '/about/aims-and-scope', element: AimsAndScope, meta: { hero: 'standard', stats: true, topbar: false } },
-  { path: '/about/editorial-board', element: EditorialBoard, meta: { hero: 'standard', stats: true, topbar: false } },
+  { path: '/about/aims-and-scope', element: AimsAndScope, meta: { hero: 'standard', stats: true, topbar: true } },
+  { path: '/about/editorial-board', element: EditorialBoard, meta: { hero: 'standard', stats: true, topbar: true } },
+  { path: '/about/journal-insights', element: JournalInsights, meta: { hero: 'standard', stats: true, topbar: true } },
+  { path: '/about/news', element: News, meta: { hero: 'standard', stats: true, topbar: true } },
+  { path: '/language-editing', element: LanguageEditing, meta: { hero: 'standard', stats: true, topbar: true } },
+  { path: '/submit-article', element: SubmitArticle, meta: { hero: 'standard', stats: true, topbar: true } },
+  { path: '/open-access-Option', element: OpenAccessOption, meta: { hero: 'standard', stats: true, topbar: true } },
 ];
+
 
 const DEFAULT_META = { hero: null, stats: false, topbar: false };
 

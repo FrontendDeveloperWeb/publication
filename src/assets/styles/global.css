@@ -798,7 +798,7 @@ p {
 
 
 .sd-articles-main-heading {
-  font-family: 'Playfair Display', Georgia, serif;
+
   /* Matching serif style heading from previous layout */
   font-size: 34px;
   font-weight: 500;
@@ -1145,7 +1145,7 @@ p {
 }
 
 .sd-oa-main-title-serif {
-  font-family: 'Playfair Display', Georgia, serif;
+
   font-size: 42px;
   font-weight: 500;
   color: #3C4D4B;
@@ -1366,7 +1366,7 @@ p {
   margin-top: 100px;
   /* Space allowance for floating search ribbon panel overlay */
   padding-bottom: 30px;
-  font-family: 'Inter', sans-serif;
+
 }
 
 /* ==========================================
@@ -1464,7 +1464,7 @@ p {
 }
 
 .sd-brand-name-text {
-  font-family: 'Playfair Display', Georgia, serif;
+
   font-size: 25px;
   font-weight: 500;
   color: #cfb28d;
@@ -1629,7 +1629,7 @@ p {
    ========================================== */
 .sd-jl-container {
   background-color: #ffffff;
-  font-family: 'Inter', sans-serif;
+
 }
 
 /* LEFT ACCENT CARD HEADER PROMPT RIBBON */
@@ -1798,9 +1798,6 @@ p {
   color: #223333;
 }
 
-.font-sans {
-  font-family: 'Inter', sans-serif;
-}
 
 .sd-jl-sort-label {
   font-size: 12.5px;
@@ -1988,7 +1985,6 @@ p {
   padding: 60px 0;
   display: flex;
   align-items: center;
-  font-family: 'Inter', sans-serif;
   overflow: hidden;
 }
 
@@ -2196,7 +2192,6 @@ p {
    ========================================== */
 .sd-ae-dashboard-wrapper {
   background-color: #fcfdfd;
-  font-family: 'Inter', sans-serif;
 }
 
 .sd-ae-nav-brand-item {
@@ -3643,7 +3638,7 @@ p {
 /* Nav Hover Anchors Layout */
 .sd-nav-item {
   font-size: 18px;
-  font-family: "Afacad-Medium", sans-serif;
+  font-family: "Afacad-Medium";
   font-weight: 500;
   color: #3C4D4B;
   cursor: pointer;
@@ -3830,7 +3825,6 @@ p {
 }
 
 .editorial-board-card-dark p {
-  font-family: 'Inter', sans-serif;
   color: #ffffff;
   font-size: 14px;
   line-height: 1.6;
@@ -3888,7 +3882,6 @@ p {
 }
 
 .contents-country {
-  font-family: 'Inter', sans-serif;
   font-size: 14px;
   color: #333333;
   font-weight: 500;
@@ -3902,7 +3895,6 @@ p {
 }
 
 .contents-count {
-  font-family: 'Inter', sans-serif;
   font-size: 13px;
   color: #888888;
 }
@@ -3912,7 +3904,6 @@ p {
 }
 
 .contents-footer p {
-  font-family: 'Inter', sans-serif;
   font-size: 14px;
   color: #333333;
   margin: 0;
@@ -3974,7 +3965,6 @@ p {
 }
 
 .staff-designation {
-  font-family: 'Inter', sans-serif;
   font-size: 13px;
   color: #b58253;
   /* Tan */
@@ -3992,7 +3982,6 @@ p {
 }
 
 .staff-expertise {
-  font-family: 'Inter', sans-serif;
   font-size: 13px;
   color: #777777;
 }
@@ -4094,7 +4083,6 @@ p {
 }
 
 .associate-name {
-  font-family: 'Inter', sans-serif;
   font-size: 14px;
   font-weight: 700;
   color: #333333;
@@ -4102,7 +4090,6 @@ p {
 }
 
 .associate-university {
-  font-family: 'Inter', sans-serif;
   font-size: 11px;
   color: #d4a373;
   /* Light tan color */
@@ -4111,7 +4098,6 @@ p {
 }
 
 .associate-expertise {
-  font-family: 'Inter', sans-serif;
   font-size: 10px;
   color: #8a949e;
   /* Light bluish-gray */
@@ -4140,7 +4126,6 @@ p {
   background-color: #ffffff;
   border: 1px solid #dcdcdc;
   color: #555555;
-  font-family: 'Inter', sans-serif;
   font-size: 14px;
   cursor: pointer;
   border-radius: 4px;
@@ -4188,5 +4173,763 @@ p {
   .editors-grid {
     grid-template-columns: 1fr;
     /* Stacks to 1 column on mobile */
+  }
+}
+
+/* ==========================================================================
+   JOURNAL INSIGHTS EXACT UI DESIGN BRAND CONFIGURATION
+   ========================================================================== */
+
+.sd-insights-main-title {
+  font-size: 28px;
+  color: #344342;
+  /* Direct Slate Charcoal Tone match */
+  font-weight: 600;
+}
+
+/* Master Panel Setup */
+.sd-insight-card {
+  border: 1px solid #f5f5f5;
+  border-radius: 12px;
+  /* Smooth rounded block radius */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.015);
+  min-height: 140px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sd-insight-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+/* Left Grid Section Panel Box */
+.sd-card-left-col {
+  width: 350px;
+  min-width: 355px;
+  background-color: #ffffff;
+  padding: 80px 15px;
+}
+
+.sd-insight-icon-circle {
+  background-color: #ebdcc9;
+  /* Soft Khaki light tint fill */
+  color: #344342;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+/* AntD glyph sizing inside the khaki highlight circle */
+.sd-insight-icon-circle .anticon {
+  font-size: 30px;
+  line-height: 1;
+}
+
+.sd-insight-label {
+  font-family: 'Philosopher-Bold';
+  font-size: 24px;
+  font-weight: 500;
+  color: #333333;
+}
+
+/* Vertical Divider Accent */
+.sd-card-divider-line {
+  width: 1px;
+  background-color: #BFBFBF;
+  margin: 35px 0;
+}
+
+/* Right Content Workspace Layout Blocks */
+.sd-card-right-col {
+  flex-grow: 1;
+  background-color: #ffffff;
+  max-width: 800px;
+  padding: 20px 20px 20px 60px;
+}
+
+.sd-right-heading {
+  font-size: 26px;
+  font-weight: 600;
+  color: #3C4D4B;
+}
+
+.sd-right-desc {
+  font-family: 'Afacad-Medium' !important;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #64748B !important;
+  font-weight: 500 !important;
+}
+
+.sd-right-desc span {
+  color: #000000;
+}
+
+.sd-text-highlight-gold {
+  color: #c8a27c;
+  font-weight: 500;
+}
+
+.sd-insight-text-link {
+  font-family: 'Afacad-Medium' !important;
+  font-size: 14px;
+  color: #c8a27c !important;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+/* ISSN Typography Framework */
+.sd-issn-block {
+  font-family: "Afacd-bold" !important;
+  font-size: 26px;
+  color: #3C4D4B;
+  font-weight: 700;
+}
+
+.sd-issn-label {
+
+  color: #555555;
+}
+
+
+/* Subject Framework Node */
+.sd-card-font-style h6 {
+  color: #3C4D4B;
+  font-size: 26px;
+}
+
+
+.sd-card-font-style p {
+  font-family: 'Afacad-Medium' !important;
+  color: #64748B;
+  font-size: 14px;
+}
+
+/* ==========================================================================
+   MORE JOURNAL INSIGHTS PIXEL-PERFECT STYLING
+   ========================================================================== */
+
+
+
+
+
+
+
+
+/* Big Statistics Number (Georgia Font for elegance) */
+.sd-stat-number {
+  font-size: 26px;
+  font-weight: 600;
+  color: #344342;
+  /* Slate Charcoal theme color */
+}
+
+.sd-stat-desc {
+  font-size: 16px;
+  color: #64748B;
+}
+
+/* Bullet List Styling for Abstracting & Indexing */
+.sd-indexing-list {
+  list-style-type: disc;
+  color: #64748B;
+}
+
+.sd-indexing-list li {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #64748B;
+  padding-left: 5px;
+}
+
+/* Responsive adjustment layer for tablet/mobile views */
+@media (max-width: 768px) {
+  .sd-insight-card {
+    flex-direction: column !important;
+  }
+
+  .sd-card-left-col {
+    width: 100% !important;
+    padding: 20px 10px 10px 10px !important;
+  }
+
+  .sd-card-divider-line {
+    width: 80% !important;
+    height: 1px !important;
+    margin: 5px auto !important;
+  }
+
+  .sd-card-right-col {
+    padding: 15px !important;
+    align-items: center !important;
+    text-align: center;
+    flex-direction: column !important;
+  }
+
+  .sd-indexing-list {
+    text-align: left;
+    display: inline-block;
+  }
+}
+
+/* ==========================================================================
+   LANGUAGE EDITING SERVICES PAGE — scoped styles (prefix: le-)
+   Palette namespaced to the root so it never leaks globally.
+   ========================================================================== */
+.le-root {
+  --le-charcoal: #3C4D4B;
+  --le-khaki: #c8a27c;
+  --le-tint: #ebdcc9;
+  --le-tint-soft: #CFB28D33;
+  --le-border: #ececec;
+  --le-muted: #64748B;
+  color: var(--le-charcoal);
+}
+
+/* ---------------- Section 1: banner ---------------- */
+.le-banner {
+  background-image: url("../../../public/assets/img/le-bg.png");
+  border-radius: 14px;
+  padding: 34px 50px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.le-banner-title {
+
+  font-size: clamp(26px, 3vw, 38px);
+  font-weight: 700;
+  color: var(--le-charcoal);
+  line-height: 1.15;
+}
+
+.le-banner-desc {
+  font-family: 'Afacad-Medium';
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--le-muted);
+  max-width: 620px;
+}
+
+.le-banner-illustration svg {
+  width: 220px;
+  height: 180px;
+  max-width: 100%;
+}
+
+/* ---------------- Section 2: nav tabs ---------------- */
+.le-tabs {
+  border-bottom: 1px solid var(--le-border);
+}
+
+.le-tabs-list {
+  gap: 12px 40px;
+}
+
+.le-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 2px 16px;
+  color: var(--le-muted);
+  font-size: 16px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.le-tab:hover {
+  color: var(--le-charcoal);
+}
+
+.le-tab-active {
+  color: var(--le-charcoal);
+  font-weight: 600;
+  border-bottom-color: var(--le-charcoal);
+}
+
+.le-tab-icon {
+  color: var(--le-khaki);
+  font-size: 17px;
+  display: inline-flex;
+}
+
+.le-intro-text {
+  font-family: 'Afacad-Medium';
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--le-muted);
+  max-width: 860px;
+}
+
+/* ---------------- Section 3: pricing cards ---------------- */
+.le-plan-card {
+  background: #fff;
+  border: 1px solid var(--le-border);
+  border-top: 4px solid #3C4D4B;
+  border-radius: 12px;
+  box-shadow: 0 6px 22px rgba(52, 67, 66, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+}
+
+
+.le-plan-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(52, 67, 66, 0.1);
+}
+
+.le-plan-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--le-tint);
+  color: var(--le-charcoal);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+.le-plan-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--le-charcoal);
+}
+
+.le-plan-subtitle {
+  font-family: 'Afacad-Medium';
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--le-muted);
+}
+
+.le-plan-tagline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--le-charcoal);
+}
+
+.le-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--le-khaki);
+  display: inline-block;
+}
+
+.le-plan-badge {
+  font-family: "Afacad-Medium" !important;
+  background: var(--le-tint-soft);
+  color: var(--le-charcoal);
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  padding: 10px 14px;
+  border-radius: 999px;
+}
+
+.le-plan-calc {
+  border-top: 1px solid #CFB28D;
+  padding-top: 16px;
+}
+
+.le-plan-calc-label {
+  font-size: 16px;
+  color: #3C4D4B;
+}
+
+.le-plan-card .ant-select {
+  background: #F5F0E8;
+  border: 1px solid #F5F0E8;
+  padding: 15px 15px;
+  border-radius: 10px !important;
+}
+
+.le-plan-starting {
+  font-size: 13px;
+  color: var(--le-muted);
+}
+
+.le-plan-price {
+
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--le-charcoal);
+  line-height: 1.2;
+}
+
+.le-plan-cta {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+  font-family: 'Afacad-SemiBold';
+}
+
+.le-plan-cta-outline {
+  background: #fff;
+  border: 1px solid #3C4D4B;
+  color: #3C4D4B !important;
+  color: var(--le-charcoal);
+}
+
+.le-plan-cta-outline:hover {
+  border-color: var(--le-charcoal);
+}
+
+.le-plan-cta-solid {
+  background: var(--le-charcoal);
+  border: 1px solid var(--le-charcoal);
+  color: #fff;
+}
+
+.le-plan-cta-solid:hover {
+  background: #2f3f3d;
+}
+
+/* Ant Design Select cosmetic alignment */
+.le-select .ant-select-selector {
+  height: 48px !important;
+  border-radius: 8px !important;
+  background: var(--le-tint-soft) !important;
+  border-color: transparent !important;
+  padding: 6px 14px !important;
+}
+
+.le-select .ant-select-selection-item {
+  line-height: 34px !important;
+  color: var(--le-charcoal);
+  font-weight: 600;
+}
+
+/* ---------------- Section 4: trust badges ---------------- */
+.le-trust-banner {
+  background: var(--le-tint-soft);
+  border-radius: 14px;
+}
+
+.le-trust-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  background: #CFB28D;
+  color: var(--le-charcoal);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.le-trust-icon img {
+  width: 38px;
+}
+
+.le-trust-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--le-charcoal);
+}
+
+.le-trust-desc {
+  font-family: 'Afacad-Medium';
+  font-size: 16px;
+  line-height: 1.45;
+  color: var(--le-muted);
+}
+
+/* ---------------- Section 5: comparison table ---------------- */
+.le-compare-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  min-width: 760px;
+}
+
+.le-compare-table th,
+.le-compare-table td {
+  border: 1px solid var(--le-border);
+  vertical-align: middle;
+}
+
+.le-tab-icon img {
+  width: 18px;
+}
+
+.le-compare-corner {
+  background: transparent;
+  width: 34%;
+}
+
+.le-compare-head {
+  background: var(--le-tint-soft);
+  padding: 20px 16px;
+  width: 22%;
+}
+
+.le-compare-head:first-of-type {
+  border-top-left-radius: 10px;
+}
+
+.le-compare-head:last-of-type {
+  border-top-right-radius: 10px;
+}
+
+.le-compare-head-title {
+
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--le-charcoal);
+}
+
+.le-compare-head-badge {
+  display: inline-block;
+  background: #fff;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--le-charcoal);
+  padding: 4px 12px;
+  margin: 8px 0 6px;
+}
+
+.le-compare-head-starting {
+  font-size: 12px;
+  color: var(--le-muted);
+}
+
+.le-compare-head-price {
+
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--le-charcoal);
+}
+
+.le-compare-feature {
+  font-family: 'Afacad-Medium';
+  font-size: 14px;
+  color: var(--le-charcoal);
+  padding: 16px 18px;
+}
+
+.le-compare-table tbody tr {
+  transition: background 0.15s ease;
+}
+
+.le-compare-table tbody tr:hover {
+  background: #faf8f4;
+}
+
+.le-mark {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 12px;
+}
+
+.le-mark-yes {
+  background: #2fae5f;
+}
+
+.le-mark-no {
+  background: #e5484d;
+}
+
+.le-plan-cta-footer {
+  width: auto;
+  min-width: 190px;
+  background: var(--le-khaki);
+  border: 1px solid var(--le-khaki);
+  color: #fff;
+}
+
+.le-plan-cta-footer:hover {
+  background: #b78f68;
+}
+
+/* ---------------- Responsive ---------------- */
+@media (max-width: 768px) {
+  .le-banner {
+    text-align: center;
+  }
+
+  .le-tabs-list {
+    gap: 10px 22px;
+  }
+
+  .le-tab {
+    font-size: 14px;
+  }
+
+  .le-plan-cta-footer {
+    min-width: 150px;
+  }
+}
+
+/* ---------------- Section 6: quality guarantee banner ---------------- */
+.le-guarantee-banner {
+  background: var(--le-khaki);
+  border-radius: 12px;
+}
+
+.le-guarantee-seal {
+  width: 180px;
+  height: 150px;
+  border-radius: 50%;
+
+}
+
+.le-guarantee-seal-text {
+
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--le-charcoal);
+}
+
+.le-laurel {
+  width: 92px;
+  height: auto;
+  margin-top: 6px;
+}
+
+.le-guarantee-divider {
+  width: 1px;
+  align-self: stretch;
+  background: rgba(255, 255, 255, 0.55);
+  margin: 6px 0;
+}
+
+.le-guarantee-text {
+  font-family: 'Afacad-Medium';
+  font-size: 16px;
+  line-height: 1.7;
+  color: #5f5340;
+  max-width: 720px;
+}
+
+/* ---------------- Section 7: why Elsevier editing services ---------------- */
+.le-why-title {
+
+  font-size: clamp(24px, 2.4vw, 30px);
+  font-weight: 700;
+  color: var(--le-charcoal);
+}
+
+.le-why-text {
+  font-family: 'Afacad-Medium', sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--le-muted);
+  margin-bottom: 14px;
+}
+
+.le-why-source {
+  font-family: 'Afacad-Medium', sans-serif;
+  font-size: 12px;
+  color: var(--le-muted);
+}
+
+.le-why-img {
+  border-radius: 10px;
+  object-fit: cover;
+  aspect-ratio: 16 / 11;
+  box-shadow: 0 10px 30px rgba(52, 67, 66, 0.12);
+}
+
+/* ---------------- Section 8: need something different (dark full-bleed) ---------------- */
+
+
+.le-need-title {
+
+  font-size: clamp(24px, 2.6vw, 32px);
+  font-weight: 700;
+  color: #fff;
+}
+
+.le-need-col {
+  padding: 8px 60px;
+}
+
+.le-need-col-right {
+  border-left: 1px solid rgba(255, 255, 255);
+}
+
+.le-need-band {
+  background: var(--le-charcoal);
+  padding: 40px 0 25px 0;
+  margin-bottom: 160px !important;
+}
+
+.le-need-heading {
+
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--le-khaki);
+}
+
+.le-need-desc {
+  font-family: 'Afacad-Medium', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.82);
+  max-width: 420px;
+}
+
+.le-need-link {
+  font-family: 'Afacad-Medium', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--le-khaki);
+  text-decoration: underline;
+}
+
+.le-need-link:hover {
+  color: #ddb98f;
+}
+
+@media (max-width: 767px) {
+  .le-guarantee-divider {
+    width: 60%;
+    height: 1px;
+    align-self: center;
+  }
+
+  .le-guarantee-text {
+    text-align: center;
+  }
+
+  .le-need-col {
+    padding: 8px 12px;
+    text-align: center;
+  }
+
+  .le-need-col-right {
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    padding-top: 24px;
+    margin-top: 8px;
+  }
+
+  .le-need-desc {
+    margin-left: auto;
+    margin-right: auto;
   }
 }

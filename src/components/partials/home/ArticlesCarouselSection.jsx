@@ -9,7 +9,7 @@ const CAROUSEL_RESPONSIVE_SETTINGS = [
   { breakpoint: 768, settings: { slidesToShow: 1 } },  // Screens smaller than 768px
 ];
 
-export default function ArticlesCarouselSection({ articles }) {
+export default function ArticlesCarouselSection({ articles, title = "Article" }) {
   const carouselRef = useRef(null);
 
   return (
@@ -19,7 +19,7 @@ export default function ArticlesCarouselSection({ articles }) {
 
           {/* SECTION TITLE */}
           <div className="text-center mb-5">
-            <h2 className="sd-articles-main-heading">Article</h2>
+            <h2 className="sd-articles-main-heading">{title}</h2>
           </div>
 
           {/* ANT DESIGN CAROUSEL / SLIDER */}
